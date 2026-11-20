@@ -2,17 +2,2826 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=public/index.html">
-  <title>PK DAS (DEEMED TO BE UNIVERSITY) | Redirecting to Dashboard...</title>
-  <script>
-    window.location.replace("public/index.html" + window.location.search + window.location.hash);
-  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PK DAS (DEEMED TO BE UNIVERSITY) - NOVAPORTAL ERP Super Admin Institutional Performance & Analytics Dashboard">
+  <meta name="author" content="PK DAS (DEEMED TO BE UNIVERSITY) Institutional Intelligence">
+  <title>PK DAS (DEEMED TO BE UNIVERSITY) | Institutional Performance & Analytics</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  
+  <!-- JAIN ERP Dashboard Stylesheet -->
+  <link rel="stylesheet" href="assets/css/dashboard.css">
 </head>
-<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; background: #f8fafc;">
-  <div style="text-align: center; padding: 24px; background: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-    <h3 style="color: #1e1b4b; margin-top: 0;">PK DAS (DEEMED TO BE UNIVERSITY)</h3>
-    <p style="color: #64748b;">Loading Super Admin Analytics Dashboard...</p>
-    <p style="font-size: 0.9rem;">If you are not redirected automatically, <a href="public/index.html" style="color: #2563eb; font-weight: 600;">click here</a>.</p>
+<body>
+
+  <!-- ========================================================================= -->
+  <!-- MAIN APPLICATION SHELL (FULL WIDTH CLEAN VIEW)                            -->
+  <!-- ========================================================================= -->
+  <div class="app-shell">
+
+    <!-- MAIN WORKSPACE & CONTENT AREA -->
+    <div class="main-content-wrapper">
+
+      <!-- TOP APP NAVIGATION BAR (PK DAS DEEMED TO BE UNIVERSITY) -->
+      <header class="jain-topbar d-flex align-items-center justify-content-between px-3">
+        
+        <!-- Left: PK DAS University Logo & Title -->
+        <div class="brand-wrapper d-flex align-items-center gap-3">
+          <img src="assets/images/pk-das-logo.jpg" alt="PK DAS (DEEMED TO BE UNIVERSITY)" class="pkdas-topbar-logo" style="height: 42px; width: auto; max-width: 175px; object-fit: contain; border-radius: 4px; background: #ffffff; padding: 2px 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.12);">
+          <div>
+            <h1 class="jain-title-text" style="font-size: 0.95rem; font-weight: 800; color: #1e1b4b; line-height: 1.2; margin: 0;">PK DAS (DEEMED TO BE UNIVERSITY)</h1>
+            <p class="jain-subtitle-text mb-0" style="font-size: 0.70rem; font-weight: 600; color: #475569; letter-spacing: 0.2px;">INSTITUTIONAL PERFORMANCE &amp; ANALYTICS &bull; ALL 10 CONSTITUENT FACULTIES</p>
+          </div>
+        </div>
+
+        <!-- Right: Term Selector, Alerts & Enova Profile -->
+        <div class="d-flex align-items-center gap-3">
+          
+          <!-- Academic Term Selector -->
+          <div class="dropdown">
+            <button class="term-selector-box dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span>AT: Odd sem 2026-2027</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 font-monospace" style="font-size:0.8rem;">
+              <li><a class="dropdown-item active" href="#">Odd sem 2026-2027 (Active)</a></li>
+              <li><a class="dropdown-item" href="#">Even sem 2025-2026</a></li>
+              <li><a class="dropdown-item" href="#">Odd sem 2025-2026</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Academic Year Archive (2024-2025)</a></li>
+            </ul>
+          </div>
+
+          <!-- Chat bubble with badge 12 -->
+          <div class="topbar-action-icon" title="Institutional Messages">
+            <i class="bi bi-chat-dots-fill"></i>
+            <span class="topbar-badge-purple">12</span>
+          </div>
+
+          <!-- Language Selector -->
+          <div class="topbar-action-icon" title="Change Language">
+            <span style="font-size: 0.85rem; font-weight: 700;">A 文</span>
+          </div>
+
+          <!-- Notification Bell -->
+          <div class="topbar-action-icon" title="Notifications">
+            <i class="bi bi-bell-fill"></i>
+          </div>
+
+          <!-- User Profile: ENOVA SOFTWARE / ADMIN -->
+          <div class="user-profile-widget">
+            <div class="user-avatar-circle">
+              <i class="bi bi-person-fill"></i>
+            </div>
+            <div class="user-info-text d-none d-sm-block">
+              <div class="user-info-name">ENOVA SOFTWARE</div>
+              <div class="user-info-role">ADMIN</div>
+            </div>
+          </div>
+
+        </div>
+      </header>
+
+            <!-- JAIN SUB-NAVIGATION BAR WITH QUICK TABS & FLASH NEWS RIBBON -->
+      <nav class="jain-subnav">
+        <!-- Horizontal Tabs -->
+        <div class="subnav-tabs">
+          <a href="#sectionKpis" class="subnav-pill active"><i class="bi bi-house-door"></i> Overview &amp; Ledger</a>
+          <a href="#sectionCampusComparison" class="subnav-pill"><i class="bi bi-buildings"></i> BLR vs KOCHI</a>
+          <a href="#sectionAcademic" class="subnav-pill"><i class="bi bi-mortarboard"></i> Academics</a>
+          <a href="#sectionFinance" class="subnav-pill"><i class="bi bi-cash-stack"></i> Finance</a>
+          <a href="#sectionResearch" class="subnav-pill"><i class="bi bi-journal-text"></i> Research</a>
+          <a href="#sectionStudents" class="subnav-pill"><i class="bi bi-people"></i> Students</a>
+          <a href="#sectionFaculty" class="subnav-pill"><i class="bi bi-person-workspace"></i> Faculty</a>
+          <a href="#sectionAttendance" class="subnav-pill"><i class="bi bi-calendar-check"></i> Attendance</a>
+          <a href="#sectionPlacements" class="subnav-pill"><i class="bi bi-briefcase"></i> Placements</a>
+          <a href="#sectionInsights" class="subnav-pill"><i class="bi bi-shield-exclamation"></i> Matrix &amp; Alerts</a>
+          <a href="javascript:void(0)" onclick="openCollegeDrilldownModal(1)" class="subnav-pill text-primary fw-bold">
+            <i class="bi bi-box-arrow-up-right"></i> Faculty Dossier
+          </a>
+        </div>
+
+        <!-- Flash News Ribbon -->
+        <div class="flash-news-wrapper d-none d-md-flex">
+          <div class="flash-news-badge">
+            <span>Flash News</span>
+          </div>
+          <div class="flash-news-content">
+            <marquee behavior="scroll" direction="left" scrollamount="4">
+              IQAC NIRF 2026 Institutional Audit Active &bull; Odd Semester Exam Results Consolidated &bull; All 10 Constituent Faculties Online &bull; Placement Drive: 89.28% Realized
+            </marquee>
+          </div>
+        </div>
+      </nav>
+
+      <!-- DASHBOARD INNER HEADER -->
+      <div class="dashboard-page-header">
+        <div>
+          <h2 class="dashboard-title-main">Dashboard</h2>
+          <p class="text-muted small m-0">University Leadership Performance & Strategic Monitoring Suite</p>
+        </div>
+
+      </div>
+
+      <!-- ------------------------------------------------------------------- -->
+      <!-- SECTION: E-NOTIFICATION (WORKFLOW APPROVALS TABLE)                   -->
+      <!-- ------------------------------------------------------------------- -->
+      <div class="e-notification-card" id="eNotificationSection">
+        <h3 class="gold-section-title">
+          <i class="bi bi-bell-fill"></i> e-Notification
+        </h3>
+
+        <!-- Subtab links: Waiting on me, My Open, My All, All -->
+        <div class="subtab-links">
+          <a href="javascript:void(0)" class="subtab-link active" onclick="switchNotificationTab(this, 'waiting')">Waiting on me</a>
+          <a href="javascript:void(0)" class="subtab-link" onclick="switchNotificationTab(this, 'open')">My Open</a>
+          <a href="javascript:void(0)" class="subtab-link" onclick="switchNotificationTab(this, 'myall')">My All</a>
+          <a href="javascript:void(0)" class="subtab-link" onclick="switchNotificationTab(this, 'all')">All</a>
+        </div>
+
+        <!-- Controls: Records count and Search box -->
+        <div class="table-controls-row">
+          <div class="d-flex align-items-center gap-2">
+            <select class="form-select form-select-sm" style="width: 85px;">
+              <option value="10">10</option>
+              <option value="25">25</option>
+              <option value="50" selected>50</option>
+              <option value="100">100</option>
+            </select>
+            <span class="text-muted small">Records</span>
+          </div>
+
+          <div class="position-relative">
+            <input type="text" id="notificationSearch" class="search-input-rounded" placeholder="Search workflow...">
+          </div>
+        </div>
+
+        <!-- ERP Table -->
+        <div class="table-responsive">
+          <table class="enterprise-table" id="eNotificationTable">
+            <thead>
+              <tr>
+                <th>ID <i class="bi bi-arrow-down-up small text-muted"></i></th>
+                <th>Module</th>
+                <th>Workflow Type</th>
+                <th>Title</th>
+                <th>Reported By</th>
+                <th>Assigned To</th>
+                <th>Priority</th>
+                <th>Updated By</th>
+                <th>Created On</th>
+                <th>Last Updated On</th>
+              </tr>
+            </thead>
+            <tbody id="notificationTableBody">
+              <tr class="clickable-wf-row" onclick="openWorkflowDetailModal('WF-9821')" title="Click to view query details and document verification">
+                <td class="fw-bold text-primary">#WF-9821 <i class="bi bi-box-arrow-up-right small text-muted ms-1"></i></td>
+                <td><span class="badge bg-light text-dark border">Academic</span></td>
+                <td>End-Semester Exam Moderation</td>
+                <td class="fw-semibold">FET-BLR: Odd Sem Final Question Bank Moderation Sign-Off</td>
+                <td>Dr. R. K. Narayanan (Dean)</td>
+                <td><span class="badge bg-primary bg-opacity-10 text-primary">Super Admin</span></td>
+                <td><span class="badge bg-danger">High</span></td>
+                <td>Controller of Exams</td>
+                <td>17-11-2026</td>
+                <td>18-11-2026 09:30</td>
+              </tr>
+              <tr class="clickable-wf-row" onclick="openWorkflowDetailModal('WF-9818')" title="Click to view query details and document verification">
+                <td class="fw-bold text-primary">#WF-9818 <i class="bi bi-box-arrow-up-right small text-muted ms-1"></i></td>
+                <td><span class="badge bg-light text-dark border">Finance</span></td>
+                <td>Fee Concession Approval</td>
+                <td class="fw-semibold">FMS-KOC: Merit-cum-Means Scholarships Batch 2026-27 (₹14.2 L)</td>
+                <td>Dr. K. S. Pillai (Dean)</td>
+                <td><span class="badge bg-primary bg-opacity-10 text-primary">Super Admin</span></td>
+                <td><span class="badge bg-warning text-dark">Medium</span></td>
+                <td>Accounts Officer</td>
+                <td>16-11-2026</td>
+                <td>18-11-2026 10:15</td>
+              </tr>
+              <tr class="clickable-wf-row" onclick="openWorkflowDetailModal('WF-9804')" title="Click to view query details and document verification">
+                <td class="fw-bold text-primary">#WF-9804 <i class="bi bi-box-arrow-up-right small text-muted ms-1"></i></td>
+                <td><span class="badge bg-light text-dark border">HR & Faculty</span></td>
+                <td>Faculty Recruitment Sanction</td>
+                <td class="fw-semibold">FAC-KOC: Sanction for 4 Associate Professors (AI & Cloud)</td>
+                <td>Dr. George Mathew (Dean)</td>
+                <td><span class="badge bg-primary bg-opacity-10 text-primary">Super Admin</span></td>
+                <td><span class="badge bg-primary">Normal</span></td>
+                <td>Registrar Office</td>
+                <td>15-11-2026</td>
+                <td>17-11-2026 14:20</td>
+              </tr>
+              <tr class="clickable-wf-row" onclick="openWorkflowDetailModal('WF-9799')" title="Click to view query details and document verification">
+                <td class="fw-bold text-primary">#WF-9799 <i class="bi bi-box-arrow-up-right small text-muted ms-1"></i></td>
+                <td><span class="badge bg-light text-dark border">Research</span></td>
+                <td>Incentive Grant Disbursement</td>
+                <td class="fw-semibold">FET-KOC: Publication Incentive for 12 Scopus Q1 Journals</td>
+                <td>Dr. Suresh Kumar N. (Dean)</td>
+                <td><span class="badge bg-primary bg-opacity-10 text-primary">Super Admin</span></td>
+                <td><span class="badge bg-primary">Normal</span></td>
+                <td>Dean Research</td>
+                <td>14-11-2026</td>
+                <td>17-11-2026 16:45</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="d-flex align-items-center justify-content-between text-muted small mt-2">
+          <span>Showing 1 to 4 of 4 entries</span>
+          
+        </div>
+      </div>
+
+      <!-- =================================================================== -->
+      <!-- GLOBAL STICKY FILTER BAR WITH LIVE ERP SYNC STATUS                   -->
+      <!-- =================================================================== -->
+      <section class="filter-bar-sticky">
+        
+        <!-- Live ERP Sync & Institutional Scope Ribbon -->
+        <div class="d-flex align-items-center justify-content-between mb-2 pb-2 border-bottom flex-wrap gap-2">
+          <div class="d-flex align-items-center gap-2">
+            <span class="erp-sync-pill">
+              <span class="sync-pulse"></span>
+              <span>Last ERP Sync: <strong id="lblLastSyncTime">19-Nov-2026 13:04:00 IST</strong></span>
+              <span class="badge bg-success bg-opacity-10 text-success border border-success-subtle">LIVE</span>
+            </span>
+            <span class="text-muted small d-none d-md-inline">&bull; Consolidated Institutional Performance Data Feed</span>
+          </div>
+
+          <!-- 3 Comparison Views (Requirement 6: All Colleges, BLR vs KOCHI, Individual College) -->
+          <div class="d-flex align-items-center gap-2">
+            <div class="view-mode-pill-group" id="groupComparisonViews">
+              <button type="button" class="view-mode-pill active" id="btnViewAllColleges" onclick="window.setComparisonView('all')">
+                <i class="bi bi-grid-3x3-gap-fill"></i> All 10 Colleges
+              </button>
+              <button type="button" class="view-mode-pill" id="btnViewBlrVsKochi" onclick="window.setComparisonView('campus')">
+                <i class="bi bi-buildings-fill"></i> BLR vs KOCHI
+              </button>
+              <button type="button" class="view-mode-pill" id="btnViewIndividual" onclick="window.setComparisonView('college')">
+                <i class="bi bi-building"></i> Individual College
+              </button>
+            </div>
+            <span class="badge bg-light text-primary border" id="badgeActiveFilterScope"><i class="bi bi-funnel-fill text-primary me-1"></i>Scope: All 10 Colleges &bull; Consolidated</span>
+          </div>
+        </div>
+
+        <!-- 6-Vector Unified Global Filter Bar (Requirement 1) -->
+        <div class="row g-2 align-items-center">
+          
+          <!-- 1. Academic Year -->
+          <div class="col-12 col-sm-6 col-md-4 col-xl-2">
+            <label for="filterAcademicYear" class="filter-label">
+              <i class="bi bi-calendar3"></i> Academic Year
+            </label>
+            <select id="filterAcademicYear" class="form-select form-select-sm">
+              <option value="2026-2027" selected>2026-2027 (Current AY)</option>
+              <option value="2025-2026">2025-2026 (Previous AY)</option>
+              <option value="2024-2025">2024-2025 (Archived)</option>
+            </select>
+          </div>
+
+          <!-- 2. Term / Semester -->
+          <div class="col-12 col-sm-6 col-md-4 col-xl-2">
+            <label for="filterSemester" class="filter-label">
+              <i class="bi bi-layers"></i> Term / Semester
+            </label>
+            <select id="filterSemester" class="form-select form-select-sm">
+              <option value="all" selected>All Semesters (Consolidated)</option>
+              <option value="odd">Odd Semesters (1, 3, 5, 7)</option>
+              <option value="even">Even Semesters (2, 4, 6, 8)</option>
+              <option value="SEM-1">Semester 1</option>
+              <option value="SEM-3">Semester 3</option>
+              <option value="SEM-5">Semester 5</option>
+              <option value="SEM-7">Semester 7</option>
+            </select>
+          </div>
+
+          <!-- 3. Campus Location -->
+          <div class="col-12 col-sm-6 col-md-4 col-xl-2">
+            <label for="filterCampus" class="filter-label">
+              <i class="bi bi-geo-alt"></i> Campus Location
+            </label>
+            <select id="filterCampus" class="form-select form-select-sm">
+              <option value="ALL" selected>All Campuses (BLR &amp; KOCHI)</option>
+              <option value="BLR">Bangalore Campus (3 Faculties)</option>
+              <option value="KOCHI">Kochi Campus (7 Faculties)</option>
+            </select>
+          </div>
+
+          <!-- 4. Constituent College -->
+          <div class="col-12 col-sm-6 col-md-4 col-xl-2">
+            <label for="filterCollege" class="filter-label">
+              <i class="bi bi-buildings"></i> College / Faculty
+            </label>
+            <select id="filterCollege" class="form-select form-select-sm">
+              <option value="all" selected>All 10 Faculties</option>
+              <option value="1">FET - Engg &amp; Tech (BLR)</option>
+              <option value="2">FCOM - Commerce (BLR)</option>
+              <option value="3">FMS - Management Studies (BLR)</option>
+              <option value="4">FAC - Arts &amp; Commerce (KOC)</option>
+              <option value="5">FAHSS - Humanities &amp; Social Sci (KOC)</option>
+              <option value="6">FCD - Creative Arts &amp; Design (KOC)</option>
+              <option value="7">FMS - Management Studies (KOC)</option>
+              <option value="8">FCOM - Commerce (KOC)</option>
+              <option value="9">FET - Engineering &amp; Tech (KOC)</option>
+              <option value="10">FBAS - Basic &amp; Applied Sciences (KOC)</option>
+            </select>
+          </div>
+
+          <!-- 5. Programme Cadre -->
+          <div class="col-12 col-sm-6 col-md-4 col-xl-2">
+            <label for="filterProgramme" class="filter-label">
+              <i class="bi bi-mortarboard"></i> Programme Cadre
+            </label>
+            <select id="filterProgramme" class="form-select form-select-sm">
+              <option value="all" selected>All Programmes (UG, PG, Ph.D)</option>
+              <option value="UG">Undergraduate (UG)</option>
+              <option value="PG">Postgraduate (PG)</option>
+              <option value="PHD">Doctoral Research (Ph.D)</option>
+            </select>
+          </div>
+
+          <!-- 6. Department -->
+          <div class="col-12 col-sm-6 col-md-4 col-xl-2">
+            <label for="filterDepartment" class="filter-label">
+              <i class="bi bi-diagram-2"></i> Department
+            </label>
+            <select id="filterDepartment" class="form-select form-select-sm">
+              <option value="all" selected>All Departments</option>
+            </select>
+          </div>
+
+        </div>
+
+        <!-- Filter Action Toolbar -->
+        <div class="d-flex align-items-center justify-content-between mt-2 pt-2 border-top flex-wrap gap-2">
+          <div class="d-flex align-items-center gap-2">
+            <button type="button" id="btnApplyGlobalFilters" class="btn btn-sm btn-primary px-3 py-1 fw-semibold">
+              <i class="bi bi-funnel me-1"></i> Apply Filters
+            </button>
+            <button type="button" id="btnResetGlobalFilters" class="btn btn-sm btn-outline-secondary px-3 py-1">
+              <i class="bi bi-arrow-counterclockwise me-1"></i> Reset
+            </button>
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <span class="text-xs text-muted" id="txtFilterStatusMessage">Filtered against actual ERP database records</span>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ----------------------------------------------------------------- -->
+        <!-- SECTION 1: EXECUTIVE KPI CARDS                                    -->
+        <!-- ----------------------------------------------------------------- -->
+        <section id="sectionKpis" class="section-anchor mb-4">
+          <div class="analytics-section-header">
+            <div>
+              <h2 class="section-title">
+                <span class="section-icon-box"><i class="bi bi-speedometer2"></i></span>
+                Executive KPI Scorecard
+              </h2>
+              <p class="section-subtitle">Real-time macro indicators aggregated across active university filters</p>
+            </div>
+            <span class="badge bg-light text-secondary border">Academic Year 2026-2027</span>
+          </div>
+
+          <!-- 8 Executive Cards Grid (Click any card or number to open Detailed Current vs Previous Comparison) -->
+          <div class="row g-3">
+            
+            <!-- 1. Total Student Strength -->
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="kpi-card" id="cardKpiStudents" data-kpi="student_strength" onclick="openKpiCompareModal('student_strength')" title="Click to view detailed Current vs Previous Academic Year student comparison">
+                <div class="kpi-card-header">
+                  <div>
+                    <span class="kpi-title">Total Student Strength</span>
+                    
+                  </div>
+                  <div class="kpi-icon-wrapper" style="background:#eff6ff; color:#2563eb;">
+                    <i class="bi bi-mortarboard-fill"></i>
+                  </div>
+                </div>
+                <div>
+                  <div class="kpi-value-main" id="kpiStudentStrength">-</div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <span class="kpi-trend-badge up" id="kpiStudentTrend">
+                      <i class="bi bi-arrow-up-right"></i> +5.34%
+                    </span>
+                    <span class="kpi-context-note" id="kpiStudentSubtext">vs Prev AY</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Total Faculty Strength -->
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="kpi-card" id="cardKpiFaculty" data-kpi="faculty_strength" onclick="openKpiCompareModal('faculty_strength')" title="Click to view detailed Current vs Previous faculty cadre comparison">
+                <div class="kpi-card-header">
+                  <div>
+                    <span class="kpi-title">Total Faculty Strength</span>
+                    
+                  </div>
+                  <div class="kpi-icon-wrapper" style="background:#f5f3ff; color:#8b5cf6;">
+                    <i class="bi bi-person-workspace"></i>
+                  </div>
+                </div>
+                <div>
+                  <div class="kpi-value-main" id="kpiFacultyStrength">-</div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <span class="kpi-trend-badge up" id="kpiFacultyTrend">
+                      <i class="bi bi-arrow-up-right"></i> +5.21%
+                    </span>
+                    <span class="kpi-context-note" id="kpiFacultySubtext">Active Faculty</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Total Fee Demand -->
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="kpi-card" id="cardKpiDemand" data-kpi="fee_demand" onclick="openKpiCompareModal('fee_demand')" title="Click to view detailed Current vs Previous fee demand comparison">
+                <div class="kpi-card-header">
+                  <div>
+                    <span class="kpi-title">Total Fee Demand</span>
+                    
+                  </div>
+                  <div class="kpi-icon-wrapper" style="background:#fffbeb; color:#d97706;">
+                    <i class="bi bi-receipt-cutoff"></i>
+                  </div>
+                </div>
+                <div>
+                  <div class="kpi-value-main" id="kpiFeeDemand">-</div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <span class="kpi-trend-badge up" id="kpiDemandTrend">
+                      <i class="bi bi-arrow-up-right"></i> +8.7% YoY
+                    </span>
+                    <span class="kpi-context-note" id="kpiDemandSubtext">Approved Budget</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. Total Fee Collection -->
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="kpi-card" id="cardKpiCollection" data-kpi="fee_collection" onclick="openKpiCompareModal('fee_collection')" title="Click to view detailed Current vs Previous fee collection & recovery comparison">
+                <div class="kpi-card-header">
+                  <div>
+                    <span class="kpi-title">Total Fee Collection</span>
+                    
+                  </div>
+                  <div class="kpi-icon-wrapper" style="background:#ecfdf5; color:#10b981;">
+                    <i class="bi bi-cash-coin"></i>
+                  </div>
+                </div>
+                <div>
+                  <div class="kpi-value-main" id="kpiFeeCollection">-</div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <span class="kpi-trend-badge up" id="kpiCollectionTrend">
+                      <i class="bi bi-arrow-up-right"></i> 90.18% Rate
+                    </span>
+                    <span class="kpi-context-note" id="kpiCollectionSubtext">Realized Amount</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5. Overall Pass Percentage -->
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="kpi-card" id="cardKpiPass" data-kpi="pass_percentage" onclick="openKpiCompareModal('pass_percentage')" title="Click to view detailed Current vs Previous semester examination outcomes">
+                <div class="kpi-card-header">
+                  <div>
+                    <span class="kpi-title">Overall Pass Percentage</span>
+                    
+                  </div>
+                  <div class="kpi-icon-wrapper" style="background:#f0fdf4; color:#16a34a;">
+                    <i class="bi bi-award-fill"></i>
+                  </div>
+                </div>
+                <div>
+                  <div class="kpi-value-main" id="kpiPassPercentage">-</div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <span class="kpi-trend-badge up" id="kpiPassTrend">
+                      <i class="bi bi-arrow-up-right"></i> +1.83%
+                    </span>
+                    <span class="kpi-context-note" id="kpiPassSubtext">Passed / Appeared</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 6. Total Research Publications -->
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="kpi-card" id="cardKpiResearch" data-kpi="research_publications" onclick="openKpiCompareModal('research_publications')" title="Click to view detailed Current vs Previous research publication comparison">
+                <div class="kpi-card-header">
+                  <div>
+                    <span class="kpi-title">Research Publications</span>
+                    
+                  </div>
+                  <div class="kpi-icon-wrapper" style="background:#eff6ff; color:#3b82f6;">
+                    <i class="bi bi-journal-richtext"></i>
+                  </div>
+                </div>
+                <div>
+                  <div class="kpi-value-main" id="kpiResearchPublications">-</div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <span class="kpi-trend-badge up" id="kpiResearchTrend">
+                      <i class="bi bi-arrow-up-right"></i> +14.3% YoY
+                    </span>
+                    <span class="kpi-context-note" id="kpiResearchSubtext">Unique Peer-Reviewed</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 7. Overall Placement Percentage -->
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="kpi-card" id="cardKpiPlacement" data-kpi="placement_percentage" onclick="openKpiCompareModal('placement_percentage')" title="Click to view detailed Current vs Previous placement rates and packages">
+                <div class="kpi-card-header">
+                  <div>
+                    <span class="kpi-title">Overall Placement Rate</span>
+                    
+                  </div>
+                  <div class="kpi-icon-wrapper" style="background:#faf5ff; color:#a855f7;">
+                    <i class="bi bi-briefcase-fill"></i>
+                  </div>
+                </div>
+                <div>
+                  <div class="kpi-value-main" id="kpiPlacementPercentage">-</div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <span class="kpi-trend-badge up" id="kpiPlacementTrend">
+                      <i class="bi bi-arrow-up-right"></i> +2.43%
+                    </span>
+                    <span class="kpi-context-note" id="kpiPlacementSubtext">Placed / Eligible</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 8. Overall Attendance Percentage -->
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="kpi-card" id="cardKpiAttendance" data-kpi="attendance_percentage" onclick="openKpiCompareModal('attendance_percentage')" title="Click to view detailed Current vs Previous attendance and detention analysis">
+                <div class="kpi-card-header">
+                  <div>
+                    <span class="kpi-title">Overall Attendance Rate</span>
+                    
+                  </div>
+                  <div class="kpi-icon-wrapper" style="background:#ecfeff; color:#06b6d4;">
+                    <i class="bi bi-calendar-check-fill"></i>
+                  </div>
+                </div>
+                <div>
+                  <div class="kpi-value-main" id="kpiAttendancePercentage">-</div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <span class="kpi-trend-badge up" id="kpiAttendanceTrend">
+                      <i class="bi bi-arrow-up-right"></i> +1.14%
+                    </span>
+                    <span class="kpi-context-note" id="kpiAttendanceSubtext">Institutional Average</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Comprehensive Examination Ledger: Placed immediately after KPI Cards (Requirement 3) -->
+            <div class="col-12 mt-3">
+              <div class="dashboard-card">
+                <div class="card-title-bar">
+                  <h3 class="card-header-title">
+                    <i class="bi bi-table text-secondary"></i> Comprehensive Examination Ledger
+                  </h3>
+                  <span class="card-header-badge bg-light text-dark border">Consolidated Student Counts &bull; Click row to open modal</span>
+                </div>
+                <div class="table-responsive">
+                  <table class="enterprise-table" id="tableAcademicDetails">
+                    <thead>
+                      <tr>
+                        <th>College Code</th>
+                        <th>Constituent College Name</th>
+                        <th class="text-end">Appeared</th>
+                        <th class="text-end">Passed</th>
+                        <th class="text-end">Failed</th>
+                        <th class="text-end">1 Arrear</th>
+                        <th class="text-end">2 Arrears</th>
+                        <th class="text-end">Arrears &gt; 2</th>
+                        <th class="text-end">Pass %</th>
+                        <th class="text-end">Distinction</th>
+                        <th class="text-end">First Class</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tableAcademicBody">
+                      <!-- Dynamic rows -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+                <!-- ----------------------------------------------------------------- -->
+        <!-- SECTION 1B: BLR VS KOCHI CONSOLIDATED INSTITUTIONAL COMPARISON    -->
+        <!-- ----------------------------------------------------------------- -->
+        <section id="sectionCampusComparison" class="section-anchor mb-4">
+          <div class="analytics-section-header">
+            <div>
+              <h2 class="section-title">
+                <span class="section-icon-box"><i class="bi bi-diagram-3-fill"></i></span>
+                Consolidated Institutional Comparison: Bangalore (BLR) vs Kochi (KOCHI) Campuses
+              </h2>
+              <p class="section-subtitle">Multi-vector institutional audit comparing student enrollment, academic outcomes, research, finance, and placement</p>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <span class="badge bg-primary bg-opacity-10 text-primary border border-primary-subtle">BLR: 3 Faculties &bull; 10,210 Students</span>
+              <span class="badge bg-success bg-opacity-10 text-success border border-success-subtle">KOCHI: 7 Faculties &bull; 13,250 Students</span>
+              <button type="button" class="btn btn-sm section-collapse-btn" data-bs-toggle="collapse" data-bs-target="#collapseCampusComparison" aria-expanded="true" title="Collapse/Expand Section">
+                <i class="bi bi-chevron-up me-1"></i><span class="collapse-label">Collapse</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="collapse show" id="collapseCampusComparison">
+            <!-- Comparison Metrics Grid -->
+            <div class="row g-3 mb-3" id="campusMetricsContainer">
+              <div class="col-12 col-sm-6 col-lg-3">
+                <div class="dashboard-card p-3">
+                  <div class="text-xs text-muted fw-bold text-uppercase">Student Strength</div>
+                  <div class="d-flex justify-content-between align-items-center mt-2">
+                    <div>
+                      <span class="badge bg-primary-subtle text-primary">BLR</span>
+                      <div class="fw-bold fs-5 text-dark">10,210</div>
+                    </div>
+                    <div class="text-end">
+                      <span class="badge bg-success-subtle text-success">KOCHI</span>
+                      <div class="fw-bold fs-5 text-dark">13,250</div>
+                    </div>
+                  </div>
+                  <div class="text-xs text-muted mt-2 border-top pt-1">Total: <strong>23,460</strong> enrolled</div>
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-lg-3">
+                <div class="dashboard-card p-3">
+                  <div class="text-xs text-muted fw-bold text-uppercase">Pass Percentage</div>
+                  <div class="d-flex justify-content-between align-items-center mt-2">
+                    <div>
+                      <span class="badge bg-primary-subtle text-primary">BLR</span>
+                      <div class="fw-bold fs-5 text-success">92.01%</div>
+                    </div>
+                    <div class="text-end">
+                      <span class="badge bg-success-subtle text-success">KOCHI</span>
+                      <div class="fw-bold fs-5 text-primary">89.30%</div>
+                    </div>
+                  </div>
+                  <div class="text-xs text-muted mt-2 border-top pt-1">Delta: <strong>+2.71 pp</strong> BLR Advantage</div>
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-lg-3">
+                <div class="dashboard-card p-3">
+                  <div class="text-xs text-muted fw-bold text-uppercase">Fee Realization</div>
+                  <div class="d-flex justify-content-between align-items-center mt-2">
+                    <div>
+                      <span class="badge bg-primary-subtle text-primary">BLR</span>
+                      <div class="fw-bold fs-5 text-dark">93.05%</div>
+                    </div>
+                    <div class="text-end">
+                      <span class="badge bg-success-subtle text-success">KOCHI</span>
+                      <div class="fw-bold fs-5 text-dark">88.88%</div>
+                    </div>
+                  </div>
+                  <div class="text-xs text-muted mt-2 border-top pt-1">Realized: <strong>₹356.6 Cr</strong> Consolidated</div>
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-lg-3">
+                <div class="dashboard-card p-3">
+                  <div class="text-xs text-muted fw-bold text-uppercase">Placement Rate &amp; Avg CTC</div>
+                  <div class="d-flex justify-content-between align-items-center mt-2">
+                    <div>
+                      <span class="badge bg-primary-subtle text-primary">BLR</span>
+                      <div class="fw-bold fs-5 text-success">91.25% <small class="fs-6 text-muted">(₹9.23L)</small></div>
+                    </div>
+                    <div class="text-end">
+                      <span class="badge bg-success-subtle text-success">KOCHI</span>
+                      <div class="fw-bold fs-5 text-primary">87.15% <small class="fs-6 text-muted">(₹7.58L)</small></div>
+                    </div>
+                  </div>
+                  <div class="text-xs text-muted mt-2 border-top pt-1">Highest: <strong>₹52.0 LPA</strong> (FET-BLR)</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Campus Comparison Grouped Bar Chart -->
+            <div class="row g-3 mb-3">
+              <div class="col-12">
+                <div class="dashboard-card">
+                  <div class="card-title-bar">
+                    <h3 class="card-header-title">
+                      <i class="bi bi-bar-chart-line-fill text-primary"></i> Multi-Vector Performance Comparison: Bangalore vs Kochi Campuses
+                    </h3>
+                    <span class="card-header-badge bg-light text-dark border">Consolidated Metrics Normalized &bull; Click to Inspect</span>
+                  </div>
+                  <div id="chartCampusComparison" class="chart-container" style="min-height: 360px;"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Consolidated University Performance Comparison Matrix (Requirement 8) -->
+            <div class="row g-3">
+              <div class="col-12">
+                <div class="dashboard-card">
+                  <div class="card-title-bar d-flex justify-content-between align-items-center flex-wrap gap-2">
+                    <div class="d-flex align-items-center gap-2">
+                      <h3 class="card-header-title mb-0">
+                        <i class="bi bi-grid-3x3 text-primary"></i> Consolidated University Performance Comparison Matrix
+                      </h3>
+                      <span class="card-header-badge bg-primary bg-opacity-10 text-primary">All 10 Constituent Faculties &bull; Audited ERP Records</span>
+                    </div>
+                    <div class="text-xs text-muted">
+                      <i class="bi bi-cursor me-1"></i> Click any faculty row to open Detailed Performance Dossier
+                    </div>
+                  </div>
+                  <div class="table-responsive" style="max-height: 420px; overflow-y: auto;">
+                    <table class="enterprise-table university-matrix-table align-middle">
+                      <thead class="table-light sticky-top">
+                        <tr>
+                          <th>Faculty Code &amp; Name</th>
+                          <th class="text-center">Campus</th>
+                          <th class="text-end">Enrolled</th>
+                          <th class="text-center">SFR</th>
+                          <th class="text-end">Pass % (YoY)</th>
+                          <th class="text-end">Placement %</th>
+                          <th class="text-end">Avg CTC</th>
+                          <th class="text-end">Fee Realized</th>
+                          <th class="text-end">Attendance</th>
+                          <th class="text-center">RPF (Papers/Fac)</th>
+                          <th class="text-center">IPI Score</th>
+                          <th class="text-center">Institutional Status</th>
+                          <th class="text-center">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody id="tableUniversityMatrixBody">
+                        <!-- Rendered dynamically -->
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ----------------------------------------------------------------- -->
+        <!-- SECTION 2: ACADEMIC PERFORMANCE                                   -->
+        <!-- ----------------------------------------------------------------- -->
+        <section id="sectionAcademic" class="section-anchor mb-4">
+          <div class="analytics-section-header">
+            <div>
+              <h2 class="section-title">
+                <span class="section-icon-box"><i class="bi bi-book-half"></i></span>
+                Academic Performance Analytics
+              </h2>
+              <p class="section-subtitle">Examination outcomes, semester comparisons, UG vs PG ratios, and department drill-down</p>
+            </div>
+            <span class="badge bg-light text-primary border">Formula: Passed / Appeared &times; 100</span>
+          
+            <button type="button" class="btn btn-sm section-collapse-btn" data-bs-toggle="collapse" data-bs-target="#collapseAcademic" aria-expanded="true" title="Collapse/Expand Section">
+              <i class="bi bi-chevron-up me-1"></i><span class="collapse-label">Collapse</span>
+            </button>
+          </div>
+
+          <div class="collapse show" id="collapseAcademic">
+
+          <div class="row g-3">
+            <!-- College-wise Pass Percentage Comparison (All 10 Colleges) -->
+            <div class="col-12 col-xl-7">
+              <div class="dashboard-card">
+                <div class="card-title-bar flex-wrap gap-2">
+                  <div class="d-flex align-items-center gap-2">
+                    <h3 class="card-header-title">
+                      <i class="bi bi-bar-chart-fill text-primary"></i> College-Wise Pass Percentage Comparison
+                    </h3>
+                  </div>
+                  <div class="d-flex align-items-center gap-2 flex-wrap">
+                    <div class="d-flex align-items-center gap-2 ms-auto">
+                    <span class="card-header-badge bg-primary bg-opacity-10 text-primary d-none d-sm-inline">Target: 75% &bull; Click to Drilldown</span>
+                    <select id="selectAcademicPassYear" class="form-select form-select-sm" style="width: auto; min-width: 175px;">
+                      <option value="current" selected>Current Year (2026-27)</option>
+                      <option value="2year">vs Last Year (2025-26)</option>
+                      <option value="3year">3-Year Trend (2024-27)</option>
+                    </select>
+                  </div>
+                  </div>
+                </div>
+                <div id="chartAcademicPass" class="chart-container"></div>
+              </div>
+            </div>
+
+            <!-- Department-wise Performance Drill-Down -->
+            <div class="col-12 col-xl-5">
+              <div class="dashboard-card" id="deptDrilldownCard">
+                <div class="card-title-bar">
+                  <div class="d-flex align-items-center gap-2">
+                    <h3 class="card-header-title">
+                      <i class="bi bi-diagram-3-fill text-primary"></i> Department-Wise Drill-Down
+                    </h3>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <select id="selectDeptCollege" class="form-select form-select-sm" style="max-width: 250px;">
+                      <!-- Populated dynamically -->
+                    </select>
+                  </div>
+                </div>
+                <div id="chartAcademicDeptDrill" class="chart-container"></div>
+              </div>
+            </div>
+
+
+
+          </div>
+        
+          </div>
+</section>
+
+        <!-- ----------------------------------------------------------------- -->
+        <!-- SECTION 3: FINANCIAL PERFORMANCE                                  -->
+        <!-- ----------------------------------------------------------------- -->
+        <section id="sectionFinance" class="section-anchor mb-4">
+          <div class="analytics-section-header">
+            <div>
+              <h2 class="section-title">
+                <span class="section-icon-box"><i class="bi bi-cash-stack"></i></span>
+                Financial Performance & Revenue Realization
+              </h2>
+              <p class="section-subtitle">Demand vs collection, outstanding balances, monthly trajectory, and payment gateway distribution</p>
+            </div>
+            <span class="badge bg-light text-success border">Formula: Collected / Demand &times; 100</span>
+          
+            <button type="button" class="btn btn-sm section-collapse-btn" data-bs-toggle="collapse" data-bs-target="#collapseFinance" aria-expanded="true" title="Collapse/Expand Section">
+              <i class="bi bi-chevron-up me-1"></i><span class="collapse-label">Collapse</span>
+            </button>
+          </div>
+
+          <div class="collapse show" id="collapseFinance">
+
+          <div class="row g-3">
+            <!-- Faculty-wise Fee Demand vs Collection vs Outstanding -->
+            <div class="col-12 col-xl-8">
+              <div class="dashboard-card">
+                <div class="card-title-bar">
+                  <h3 class="card-header-title">
+                    <i class="bi bi-bar-chart-steps text-success"></i> College-Wise Demand &amp; Collection: Previous AY vs Current AY
+                  </h3>
+                  <span class="card-header-badge bg-success bg-opacity-10 text-success">₹ In Crores &bull; Click to Drilldown</span>
+                </div>
+                <div id="chartFinanceDemandCollection" class="chart-container chart-container-lg"></div>
+              </div>
+            </div>
+
+            <!-- Payment Mode Comparison -->
+            <div class="col-12 col-xl-4">
+              <div class="dashboard-card">
+                <div class="card-title-bar">
+                  <h3 class="card-header-title">
+                    <i class="bi bi-pie-chart-fill text-warning"></i> Payment Channel Share
+                  </h3>
+                  <span class="card-header-badge bg-warning bg-opacity-10 text-dark">UPI / Card / Net Banking</span>
+                </div>
+                <div id="chartFinancePaymentModes" class="chart-container chart-container-lg"></div>
+              </div>
+            </div>
+
+            <!-- Monthly Fee Collection Trend: College-Wise -->
+            <div class="col-12">
+              <div class="dashboard-card">
+                <div class="card-title-bar flex-wrap gap-2">
+                  <div class="d-flex align-items-center gap-2">
+                    <h3 class="card-header-title">
+                      <i class="bi bi-graph-up text-primary"></i> Monthly Collection Run-Rate: College-Wise
+                    </h3>
+                  </div>
+                  <div class="d-flex align-items-center gap-2 flex-wrap">
+                    <select id="selectFinanceMonthRange" class="form-select form-select-sm" style="max-width: 250px; font-weight:600;">
+                      <option value="last6" selected>Last 6 Months (Jun - Nov 2026)</option>
+                      <option value="q1">Q1 (Apr - Jun 2026)</option>
+                      <option value="q2">Q2 (Jul - Sep 2026)</option>
+                      <option value="full">Full Fiscal Year (2026-27)</option>
+                    </select>
+                    <span class="card-header-badge bg-success bg-opacity-10 text-success">₹ In Crores &bull; Click to Drilldown</span>
+                  </div>
+                </div>
+                <div id="chartFinanceMonthlyTrend" class="chart-container" style="min-height: 380px;"></div>
+              </div>
+            </div>
+
+          </div>
+        
+          </div>
+</section>
+
+        <!-- ----------------------------------------------------------------- -->
+        <!-- SECTION 4: RESEARCH AND INNOVATION                                -->
+        <!-- ----------------------------------------------------------------- -->
+        <section id="sectionResearch" class="section-anchor mb-4">
+          <div class="analytics-section-header">
+            <div>
+              <h2 class="section-title">
+                <span class="section-icon-box"><i class="bi bi-lightbulb-fill"></i></span>
+                Research, Publications & Intellectual Property
+              </h2>
+              <p class="section-subtitle">Scopus, Web of Science, Google Scholar citations, patents filed/granted, and productivity</p>
+            </div>
+            <span class="badge bg-light text-info border">Strict De-Duplication Protocol</span>
+          
+            <button type="button" class="btn btn-sm section-collapse-btn" data-bs-toggle="collapse" data-bs-target="#collapseResearch" aria-expanded="true" title="Collapse/Expand Section">
+              <i class="bi bi-chevron-up me-1"></i><span class="collapse-label">Collapse</span>
+            </button>
+          </div>
+
+          <div class="collapse show" id="collapseResearch">
+
+          <div class="row g-3">
+            <!-- College-wise Research Publication Comparison -->
+            <div class="col-12 col-xl-7">
+              <div class="dashboard-card">
+                <div class="card-title-bar">
+                  <h3 class="card-header-title">
+                    <i class="bi bi-journal-album text-primary"></i> Faculty Research Publications: Previous AY vs Current AY
+                  </h3>
+                  <span class="card-header-badge bg-primary bg-opacity-10 text-primary">Previous AY vs Current AY &bull; Click to Drilldown</span>
+                </div>
+                <div id="chartResearchComparison" class="chart-container chart-container-lg"></div>
+              </div>
+            </div>
+
+            <!-- Patents Filed vs Granted -->
+            <div class="col-12 col-xl-5">
+              <div class="dashboard-card">
+                <div class="card-title-bar">
+                  <h3 class="card-header-title">
+                    <i class="bi bi-patch-check-fill text-success"></i> Patent Portfolio: Filed vs Granted
+                  </h3>
+                  <span class="card-header-badge bg-success bg-opacity-10 text-success">Intellectual Property</span>
+                </div>
+                <div id="chartResearchPatents" class="chart-container chart-container-lg"></div>
+              </div>
+            </div>
+
+            <!-- College Research Output & Faculty Publishing Activity -->
+            <div class="col-12">
+              <div class="dashboard-card">
+                <div class="card-title-bar">
+                  <h3 class="card-header-title">
+                    <i class="bi bi-mortarboard-fill text-info"></i> College Research Output &amp; Publishing Faculty Strength
+                  </h3>
+                  <span class="card-header-badge bg-info bg-opacity-10 text-info">Total Published Papers vs Active Publishing Faculty</span>
+                </div>
+                <div id="chartResearchPerFaculty" class="chart-container"></div>
+              </div>
+            </div>
+
+          </div>
+        
+          </div>
+</section>
+
+        <!-- ----------------------------------------------------------------- -->
+        <!-- SECTION 5: STUDENT ANALYTICS                                      -->
+        <!-- ----------------------------------------------------------------- -->
+        <section id="sectionStudents" class="section-anchor mb-4">
+          <div class="analytics-section-header">
+            <div>
+              <h2 class="section-title">
+                <span class="section-icon-box"><i class="bi bi-people-fill"></i></span>
+                Student Demographics & Admissions Funnel
+              </h2>
+              <p class="section-subtitle">Enrolled strength, UG vs PG cadres, admission conversion efficiency, and retention</p>
+            </div>
+            <span class="badge bg-light text-secondary border">Academic Registry</span>
+          
+            <button type="button" class="btn btn-sm section-collapse-btn" data-bs-toggle="collapse" data-bs-target="#collapseStudents" aria-expanded="true" title="Collapse/Expand Section">
+              <i class="bi bi-chevron-up me-1"></i><span class="collapse-label">Collapse</span>
+            </button>
+          </div>
+
+          <div class="collapse show" id="collapseStudents">
+
+          <div class="row g-3">
+            <!-- College-wise Student Strength -->
+            <div class="col-12 col-xl-7">
+              <div class="dashboard-card">
+                <div class="card-title-bar">
+                  <h3 class="card-header-title">
+                    <i class="bi bi-bar-chart-line-fill text-primary"></i> College-Wise Student Enrollment: Previous AY vs Current AY
+                  </h3>
+                  <span class="card-header-badge bg-primary bg-opacity-10 text-primary">All 10 Faculties &bull; Click to Drilldown</span>
+                </div>
+                <div id="chartStudentStrength" class="chart-container chart-container-lg"></div>
+              </div>
+            </div>
+
+            <!-- UG vs PG vs PhD Strength -->
+            <div class="col-12 col-xl-5">
+              <div class="dashboard-card">
+                <div class="card-title-bar">
+                  <h3 class="card-header-title">
+                    <i class="bi bi-pie-chart text-info"></i> Program Cadre Enrollment Split
+                  </h3>
+                  <span class="card-header-badge bg-info bg-opacity-10 text-info">UG vs PG vs Ph.D.</span>
+                </div>
+                <div id="chartStudentCadre" class="chart-container chart-container-lg"></div>
+              </div>
+            </div>
+
+            <!-- Admission Funnel: Applications vs Confirmed Admissions -->
+            <div class="col-12">
+              <div class="dashboard-card">
+                <div class="card-title-bar flex-wrap gap-2 d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items-center gap-2">
+                    <h3 class="card-header-title mb-0">
+                      <i class="bi bi-funnel-fill text-success"></i> Admissions Intake Funnel &amp; Conversion Ratio
+                    </h3>
+                    <span class="card-header-badge bg-success bg-opacity-10 text-success">Applications &rarr; Confirmed Seats</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="d-flex align-items-center gap-1">
+                      <label for="selectFunnelCollege" class="text-xs text-muted mb-0 fw-semibold text-nowrap"><i class="bi bi-buildings"></i> College:</label>
+                      <select id="selectFunnelCollege" class="form-select form-select-sm py-1 pe-4" style="min-width: 170px; font-size: 0.78rem;">
+                        <option value="all">All Colleges Consolidated</option>
+                        <option value="1">FET - Engg &amp; Tech (BLR)</option>
+                        <option value="2">CMS - Management Studies</option>
+                        <option value="3">FCA - Computer Applications</option>
+                        <option value="4">FCOM - Commerce (BLR)</option>
+                        <option value="5">FHS - Health Sciences</option>
+                        <option value="6">SSA - Sciences &amp; Arts</option>
+                        <option value="7">SOD - Design, Media &amp; Arts</option>
+                        <option value="8">SOL - Law (Kochi)</option>
+                        <option value="9">FOE - Education &amp; Humanities</option>
+                        <option value="10">SMS - Sports Management</option>
+                      </select>
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                      <label for="selectFunnelYearMode" class="text-xs text-muted mb-0 fw-semibold text-nowrap"><i class="bi bi-calendar-range"></i> Comparison:</label>
+                      <select id="selectFunnelYearMode" class="form-select form-select-sm py-1 pe-4" style="min-width: 160px; font-size: 0.78rem;">
+                        <option value="current">Current AY (2026-27)</option>
+                        <option value="2year" selected>vs Last Year (2 Funnels)</option>
+                        <option value="3year">Last 2 Years (3 Funnels)</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div id="chartStudentFunnel" class="chart-container" style="min-height: 380px;"></div>
+              </div>
+            </div>
+
+          </div>
+        
+          </div>
+</section>
+
+        <!-- ----------------------------------------------------------------- -->
+        <!-- SECTION 6: FACULTY ANALYTICS                                      -->
+        <!-- ----------------------------------------------------------------- -->
+        <section id="sectionFaculty" class="section-anchor mb-4">
+          <div class="analytics-section-header">
+            <div>
+              <h2 class="section-title">
+                <span class="section-icon-box"><i class="bi bi-person-badge-fill"></i></span>
+                Faculty Cadres & Academic Workload
+              </h2>
+              <p class="section-subtitle">Professors, Associate Professors, Assistant Professors, PhD credentials, and Student-to-Faculty Ratio</p>
+            </div>
+            <span class="badge bg-light text-primary border">UGC / AICTE Regulatory Norms</span>
+          
+            <button type="button" class="btn btn-sm section-collapse-btn" data-bs-toggle="collapse" data-bs-target="#collapseFaculty" aria-expanded="true" title="Collapse/Expand Section">
+              <i class="bi bi-chevron-up me-1"></i><span class="collapse-label">Collapse</span>
+            </button>
+          </div>
+
+          <div class="collapse show" id="collapseFaculty">
+
+          <div class="row g-3">
+            <!-- Faculty Cadre Distribution -->
+            <div class="col-12 col-xl-7">
+              <div class="dashboard-card">
+                <div class="card-title-bar">
+                  <h3 class="card-header-title">
+                    <i class="bi bi-diagram-2-fill text-primary"></i> Faculty Strength Comparison: Previous AY vs Current AY
+                  </h3>
+                  <span class="card-header-badge bg-primary bg-opacity-10 text-primary">All 10 Faculties &bull; Click to Drilldown</span>
+                </div>
+                <div id="chartFacultyCadre" class="chart-container chart-container-lg"></div>
+              </div>
+            </div>
+
+            <!-- Student to Faculty Ratio (SFR) -->
+            <div class="col-12 col-xl-5">
+              <div class="dashboard-card">
+                <div class="card-title-bar">
+                  <h3 class="card-header-title">
+                    <i class="bi bi-people text-warning"></i> Student-to-Faculty Ratio (SFR)
+                  </h3>
+                  <span class="card-header-badge bg-warning bg-opacity-10 text-dark">Target Norm &le; 20:1</span>
+                </div>
+                <div id="chartFacultySfr" class="chart-container chart-container-lg"></div>
+              </div>
+            </div>
+
+          </div>
+        
+          </div>
+</section>
+
+        <!-- ----------------------------------------------------------------- -->
+        <!-- SECTION 7: ATTENDANCE AND EXAMINATION                             -->
+        <!-- ----------------------------------------------------------------- -->
+        <section id="sectionAttendance" class="section-anchor mb-4">
+          <div class="analytics-section-header">
+            <div>
+              <h2 class="section-title">
+                <span class="section-icon-box"><i class="bi bi-calendar-check-fill"></i></span>
+                Attendance Compliance & Examination Classifications
+              </h2>
+              <p class="section-subtitle">Biometric classroom attendance %, students below 75% threshold, and degree honors</p>
+            </div>
+            <span class="badge bg-light text-danger border">Statutory Threshold: 75%</span>
+          
+            <button type="button" class="btn btn-sm section-collapse-btn" data-bs-toggle="collapse" data-bs-target="#collapseAttendance" aria-expanded="true" title="Collapse/Expand Section">
+              <i class="bi bi-chevron-up me-1"></i><span class="collapse-label">Collapse</span>
+            </button>
+          </div>
+
+          <div class="collapse show" id="collapseAttendance">
+
+          <div class="row g-3">
+            <!-- Faculty Attendance Compliance: Previous vs Current Semester -->
+            <div class="col-12 col-xl-7">
+              <div class="dashboard-card">
+                <div class="card-title-bar">
+                  <h3 class="card-header-title">
+                    <i class="bi bi-person-x-fill text-danger"></i> Faculty Attendance Compliance: Previous vs Current Semester
+                  </h3>
+                  <span class="card-header-badge bg-danger bg-opacity-10 text-danger">75% Statutory Norm &bull; Click to Drilldown</span>
+                </div>
+                <div id="chartAttendanceComparison" class="chart-container chart-container-lg"></div>
+              </div>
+            </div>
+
+            <!-- Monthly Attendance Trajectory & Multi-Campus Trend -->
+            <div class="col-12 col-xl-5">
+              <div class="dashboard-card">
+                <div class="card-title-bar">
+                  <h3 class="card-header-title">
+                    <i class="bi bi-graph-up-arrow text-primary"></i> Monthly Attendance Trajectory: College-Wise Analysis
+                  </h3>
+                  <span class="card-header-badge bg-primary bg-opacity-10 text-primary">July 2026 - Nov 2026 Run-Rate</span>
+                </div>
+                <div id="chartAttendanceTrend" class="chart-container chart-container-lg"></div>
+              </div>
+            </div>
+
+            <!-- Classroom Biometric Bracket Split -->
+            <div class="col-12 col-lg-4">
+              <div class="dashboard-card">
+                <div class="card-title-bar flex-wrap gap-2 d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items-center gap-2">
+                    <h3 class="card-header-title mb-0">
+                      <i class="bi bi-pie-chart-fill text-info"></i> Biometric Attendance Brackets
+                    </h3>
+                    <span id="badgeBiometricFaculty" class="card-header-badge bg-info bg-opacity-10 text-info">All Students Audited</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-1">
+                    <label for="selectBiometricCollege" class="text-xs text-muted mb-0 fw-semibold text-nowrap"><i class="bi bi-buildings"></i> Faculty:</label>
+                    <select id="selectBiometricCollege" class="form-select form-select-sm py-1 pe-4" style="min-width: 155px; font-size: 0.78rem;">
+                      <option value="all">All Colleges Consolidated</option>
+                      <option value="1">FET - Engg &amp; Tech (BLR)</option>
+                      <option value="2">FCOM - Commerce (BLR)</option>
+                      <option value="3">FMS - Management Studies</option>
+                      <option value="4">FAC - Arts &amp; Commerce (KOC)</option>
+                      <option value="5">FAHSS - Humanities &amp; Social Sci</option>
+                      <option value="6">FCD - Creative Arts &amp; Design</option>
+                      <option value="7">FMS - Management Studies (KOC)</option>
+                      <option value="8">FCOM - Commerce (KOC)</option>
+                      <option value="9">FET - Engineering &amp; Tech (KOC)</option>
+                      <option value="10">FBAS - Basic &amp; Applied Sciences</option>
+                    </select>
+                  </div>
+                </div>
+                <div id="chartAttendanceBrackets" class="chart-container"></div>
+              </div>
+            </div>
+
+            <!-- Student Attendance & Detention Risk Ledger -->
+            <div class="col-12 col-lg-8">
+              <div class="dashboard-card">
+                <div class="card-title-bar">
+                  <h3 class="card-header-title">
+                    <i class="bi bi-table text-primary"></i> Student Attendance &amp; Detention Risk Ledger
+                  </h3>
+                  <span class="card-header-badge bg-light text-secondary border">All 10 Colleges &bull; Click row to drill down</span>
+                </div>
+                <div class="table-responsive" style="max-height: 340px; overflow-y: auto;">
+                  <table class="enterprise-table">
+                    <thead>
+                      <tr>
+                        <th>College</th>
+                        <th>Campus</th>
+                        <th class="text-end">Current %</th>
+                        <th class="text-end">Previous %</th>
+                        <th class="text-end">Delta (pp)</th>
+                        <th class="text-end">&gt; 85%</th>
+                        <th class="text-end">Below 75%</th>
+                        <th class="text-center">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tableAttendanceLedgerBody">
+                      <!-- Dynamically rendered -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          </div>
+</section>
+
+        <!-- ----------------------------------------------------------------- -->
+        <!-- SECTION 8: PLACEMENT ANALYTICS                                    -->
+        <!-- ----------------------------------------------------------------- -->
+        <section id="sectionPlacements" class="section-anchor mb-4">
+          <div class="analytics-section-header">
+            <div>
+              <h2 class="section-title">
+                <span class="section-icon-box"><i class="bi bi-briefcase-fill"></i></span>
+                Corporate Placements & Career Outcomes
+              </h2>
+              <p class="section-subtitle">Eligible vs placed students, CTC remuneration packages (Highest & Average), and recruiter network</p>
+            </div>
+            <span class="badge bg-light text-success border">Institutional Placement Cell</span>
+          
+            <button type="button" class="btn btn-sm section-collapse-btn" data-bs-toggle="collapse" data-bs-target="#collapsePlacements" aria-expanded="true" title="Collapse/Expand Section">
+              <i class="bi bi-chevron-up me-1"></i><span class="collapse-label">Collapse</span>
+            </button>
+          </div>
+
+          <div class="collapse show" id="collapsePlacements">
+
+          <div class="row g-3">
+            <!-- College-wise Placement Percentage & Offers -->
+            <div class="col-12 col-xl-7">
+              <div class="dashboard-card">
+                <div class="card-title-bar">
+                  <h3 class="card-header-title">
+                    <i class="bi bi-award-fill text-success"></i> Placement Realization Rate: Previous Batch vs Current Batch
+                  </h3>
+                  <span class="card-header-badge bg-success bg-opacity-10 text-success">88% Institutional Benchmark &bull; Click to Drilldown</span>
+                </div>
+                <div id="chartPlacementComparison" class="chart-container chart-container-lg"></div>
+              </div>
+            </div>
+
+            <!-- Highest Package and Average Package (LPA) -->
+            <div class="col-12 col-xl-5">
+              <div class="dashboard-card">
+                <div class="card-title-bar">
+                  <h3 class="card-header-title">
+                    <i class="bi bi-currency-rupee text-primary"></i> CTC Package Benchmarks (LPA)
+                  </h3>
+                  <span class="card-header-badge bg-primary bg-opacity-10 text-primary">Highest vs Average CTC</span>
+                </div>
+                <div id="chartPlacementCtc" class="chart-container chart-container-lg"></div>
+              </div>
+            </div>
+
+          </div>
+        
+          </div>
+</section>
+
+        <!-- ----------------------------------------------------------------- -->
+        <!-- SECTION 9: MANAGEMENT INSIGHTS & INSTITUTIONAL PERFORMANCE INDEX -->
+        <!-- ----------------------------------------------------------------- -->
+        <section id="sectionInsights" class="section-anchor mb-4">
+          <div class="analytics-section-header">
+            <div>
+              <h2 class="section-title">
+                <span class="section-icon-box"><i class="bi bi-compass-fill"></i></span>
+                Executive Management Insights &amp; Institutional Index
+              </h2>
+              <p class="section-subtitle">Institutional Performance Index (IPI), statutory rankings, multi-vector risk alerts, and NIRF criteria</p>
+            </div>
+            <span class="badge bg-light text-primary border">Statutory Multi-Vector Audit</span>
+          
+            <button type="button" class="btn btn-sm section-collapse-btn" data-bs-toggle="collapse" data-bs-target="#collapseInsights" aria-expanded="true" title="Collapse/Expand Section">
+              <i class="bi bi-chevron-up me-1"></i><span class="collapse-label">Collapse</span>
+            </button>
+          </div>
+
+          <div class="collapse show" id="collapseInsights">
+
+          <!-- Executive Management Summary Card (Requirement 8) -->
+          <div class="dashboard-card mb-3 p-3">
+            <div class="d-flex align-items-center justify-content-between mb-3 border-bottom pb-2">
+              <div class="d-flex align-items-center gap-2">
+                <span class="badge bg-dark text-white p-2"><i class="bi bi-briefcase-fill"></i></span>
+                <div>
+                  <h3 class="card-header-title mb-0">Executive Management Summary &amp; Institutional Briefing</h3>
+                  <span class="text-xs text-muted">Audited High-Level Performance Highlights &amp; Priority Remedial Action Plan</span>
+                </div>
+              </div>
+              <span class="badge bg-success bg-opacity-10 text-success border border-success-subtle">Odd Semester 2026-2027</span>
+            </div>
+
+            <div class="row g-3">
+              <!-- Positive Performance Highlights -->
+              <div class="col-12 col-lg-6">
+                <div class="p-3 rounded-2 border bg-light bg-opacity-50 h-100 border-start border-4 border-success">
+                  <h4 class="fw-bold text-success fs-6 mb-2">
+                    <i class="bi bi-check-circle-fill me-1"></i> Positive Institutional Performance Highlights
+                  </h4>
+                  <ul class="list-unstyled mb-0 small text-dark d-flex flex-column gap-2">
+                    <li class="d-flex align-items-start gap-2">
+                      <i class="bi bi-arrow-up-right-circle text-success mt-1"></i>
+                      <div><strong>IPI Composite Score 88.2/100:</strong> High-performance tier ranking within top 50 national NIRF band with robust institutional governance.</div>
+                    </li>
+                    <li class="d-flex align-items-start gap-2">
+                      <i class="bi bi-arrow-up-right-circle text-success mt-1"></i>
+                      <div><strong>Placement Quality Surge:</strong> 89.28% overall placement rate with ₹9.85 LPA average CTC and record ₹52.0 LPA super-dream package.</div>
+                    </li>
+                    <li class="d-flex align-items-start gap-2">
+                      <i class="bi bi-arrow-up-right-circle text-success mt-1"></i>
+                      <div><strong>Healthy Revenue Realization:</strong> ₹272.26 Cr fee realization achieved (90.45% collection efficiency), beating budget forecasts.</div>
+                    </li>
+                    <li class="d-flex align-items-start gap-2">
+                      <i class="bi bi-arrow-up-right-circle text-success mt-1"></i>
+                      <div><strong>Biometric Attendance Baseline:</strong> 85.92% institutional attendance with 76.8% students exceeding the 85% high compliance bracket.</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Areas Requiring Attention -->
+              <div class="col-12 col-lg-6">
+                <div class="p-3 rounded-2 border bg-light bg-opacity-50 h-100 border-start border-4 border-warning">
+                  <h4 class="fw-bold text-warning-emphasis fs-6 mb-2">
+                    <i class="bi bi-exclamation-triangle-fill me-1 text-warning"></i> Priority Areas Requiring Executive Attention
+                  </h4>
+                  <ul class="list-unstyled mb-0 small text-dark d-flex flex-column gap-2">
+                    <li class="d-flex align-items-start gap-2">
+                      <i class="bi bi-exclamation-circle text-warning mt-1"></i>
+                      <div><strong>Condonable Attendance Risk:</strong> FAHSS-KOC (81.6%) and FCOM-KOC (83.5%) have 685 candidates in condonation margin requiring proactive intervention.</div>
+                    </li>
+                    <li class="d-flex align-items-start gap-2">
+                      <i class="bi bi-exclamation-circle text-warning mt-1"></i>
+                      <div><strong>Backlog Remedial Coaching:</strong> 265 candidates across 3 departments have &gt;2 arrears requiring fast-track modular coaching.</div>
+                    </li>
+                    <li class="d-flex align-items-start gap-2">
+                      <i class="bi bi-exclamation-circle text-warning mt-1"></i>
+                      <div><strong>Fee Outstanding Recovery:</strong> ₹28.74 Cr pending realization across residential and software lab fee components.</div>
+                    </li>
+                    <li class="d-flex align-items-start gap-2">
+                      <i class="bi bi-exclamation-circle text-warning mt-1"></i>
+                      <div><strong>SFR Governance:</strong> FCOM-BLR Student-Faculty Ratio at 23.16:1 requires sanctioning 14 additional faculty posts.</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Academic & Institutional Risk Monitoring Matrix (Requirement 7) -->
+          <div class="dashboard-card mb-3 p-3">
+            <div class="d-flex align-items-center justify-content-between mb-3 border-bottom pb-2">
+              <div class="d-flex align-items-center gap-2">
+                <span class="badge bg-danger text-white p-2"><i class="bi bi-shield-slash-fill"></i></span>
+                <div>
+                  <h3 class="card-header-title mb-0">Academic &amp; Institutional Risk Monitoring Matrix</h3>
+                  <span class="text-xs text-muted">Active Risk Surveillance: Low Attendance (&lt;75%), Low Pass Rate (&lt;88%), and Fee Outstanding (&gt;10%)</span>
+                </div>
+              </div>
+              <span class="badge bg-danger bg-opacity-10 text-danger border border-danger-subtle">3 Breaches Flagged</span>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-12 col-md-4">
+                <div class="border rounded-2 p-3 bg-white h-100">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="fw-bold text-dark small"><i class="bi bi-person-x text-danger me-1"></i> Low Attendance Risk</span>
+                    <span class="badge bg-danger">Critical</span>
+                  </div>
+                  <div class="text-xs text-muted">Faculties below 85% with high detention margin:</div>
+                  <div class="mt-2 small">
+                    <div class="d-flex justify-content-between py-1 border-bottom">
+                      <span><strong>FAHSS-KOC</strong> (Kochi)</span>
+                      <span class="text-danger fw-bold">81.60% (142 at risk)</span>
+                    </div>
+                    <div class="d-flex justify-content-between py-1">
+                      <span><strong>FCOM-KOC</strong> (Kochi)</span>
+                      <span class="text-warning fw-bold">83.50% (118 at risk)</span>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-xs btn-outline-danger w-100 mt-2" onclick="openCollegeDrilldownModal(5, 'attendance')">
+                    Inspect Attendance Risk
+                  </button>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-4">
+                <div class="border rounded-2 p-3 bg-white h-100">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="fw-bold text-dark small"><i class="bi bi-mortarboard text-warning me-1"></i> Low Pass Percentage Risk</span>
+                    <span class="badge bg-warning text-dark">Moderate</span>
+                  </div>
+                  <div class="text-xs text-muted">Faculties with pass rate below 88% target:</div>
+                  <div class="mt-2 small">
+                    <div class="d-flex justify-content-between py-1 border-bottom">
+                      <span><strong>FAHSS-KOC</strong> (Kochi)</span>
+                      <span class="text-danger fw-bold">85.97% (199 failed)</span>
+                    </div>
+                    <div class="d-flex justify-content-between py-1">
+                      <span><strong>FBAS-KOC</strong> (Kochi)</span>
+                      <span class="text-warning fw-bold">86.18% (174 failed)</span>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-xs btn-outline-warning w-100 mt-2 text-dark" onclick="openCollegeDrilldownModal(5, 'depts')">
+                    Inspect Academic Backlogs
+                  </button>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-4">
+                <div class="border rounded-2 p-3 bg-white h-100">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="fw-bold text-dark small"><i class="bi bi-cash-stack text-primary me-1"></i> Fee Outstanding Risk</span>
+                    <span class="badge bg-primary">Monitoring</span>
+                  </div>
+                  <div class="text-xs text-muted">Faculties with &gt;10% fee outstanding:</div>
+                  <div class="mt-2 small">
+                    <div class="d-flex justify-content-between py-1 border-bottom">
+                      <span><strong>FAHSS-KOC</strong> (Kochi)</span>
+                      <span class="text-danger fw-bold">14.79% (₹2.10 Cr)</span>
+                    </div>
+                    <div class="d-flex justify-content-between py-1">
+                      <span><strong>FCOM-KOC</strong> (Kochi)</span>
+                      <span class="text-danger fw-bold">13.47% (₹3.50 Cr)</span>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-xs btn-outline-primary w-100 mt-2" onclick="openCollegeDrilldownModal(5, 'finance')">
+                    Inspect Uncollected Dues
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="row g-3">
+            <!-- Top 5 Performing Colleges -->
+            <div class="col-12 col-lg-6">
+              <div class="dashboard-card">
+                <div class="card-title-bar">
+                  <h3 class="card-header-title">
+                    <i class="bi bi-trophy-fill text-warning"></i> Top 5 Performing Colleges
+                  </h3>
+                  <span class="card-header-badge bg-success bg-opacity-10 text-success">Excellence Benchmark &bull; Click to Drilldown</span>
+                </div>
+                <div id="topFacultiesList" class="mt-2">
+                  <!-- Dynamically populated -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom 5 Colleges Requiring Intervention -->
+            <div class="col-12 col-lg-6">
+              <div class="dashboard-card">
+                <div class="card-title-bar">
+                  <h3 class="card-header-title">
+                    <i class="bi bi-exclamation-triangle-fill text-warning"></i> Colleges Requiring Intervention
+                  </h3>
+                  <span class="card-header-badge bg-warning bg-opacity-10 text-dark">Priority Focus &bull; Click to Drilldown</span>
+                </div>
+                <div id="bottomFacultiesList" class="mt-2">
+                  <!-- Dynamically populated -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Management Risk & Alert Centre (Academic, Financial, Attendance, Placement, Faculty) -->
+            <div class="col-12">
+              <div class="dashboard-card">
+                <div class="card-title-bar flex-wrap gap-2">
+                  <h3 class="card-header-title">
+                    <i class="bi bi-shield-exclamation text-danger"></i> Management Alert Centre
+                  </h3>
+                  <div class="d-flex align-items-center gap-1 flex-wrap" id="alertCategoryFilterBar">
+                    <button type="button" class="alert-filter-btn active" data-filter="all">All</button>
+                    <button type="button" class="alert-filter-btn" data-filter="financial">Finance</button>
+                    <button type="button" class="alert-filter-btn" data-filter="academic">Academic</button>
+                    <button type="button" class="alert-filter-btn" data-filter="attendance">Attendance</button>
+                    <button type="button" class="alert-filter-btn" data-filter="placement">Placement</button>
+                    <button type="button" class="alert-filter-btn" data-filter="faculty">Faculty</button>
+                  </div>
+                </div>
+                <div id="managementAlertsContainer" class="mt-2" style="max-height: 400px; overflow-y: auto;">
+                  <!-- Dynamically populated alerts -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Consolidated Institutional Ranking Leaderboard for All 10 Faculties -->
+            <div class="col-12">
+              <div class="dashboard-card">
+                <div class="card-title-bar">
+                  <h3 class="card-header-title">
+                    <i class="bi bi-award-fill text-warning"></i> Consolidated Institutional Ranking Leaderboard (All 10 Colleges)
+                  </h3>
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="badge bg-primary bg-opacity-10 text-primary">All 10 Colleges Consolidated</span>
+                    <button type="button" class="btn btn-sm btn-outline-primary" id="btnOpenIpiMethodologyModal" data-bs-toggle="modal" data-bs-target="#ipiMethodologyModal">
+                      <i class="bi bi-calculator me-1"></i> Transparent Methodology
+                    </button>
+                  </div>
+                </div>
+                <div class="table-responsive mt-2">
+                  <table class="enterprise-table">
+                    <thead>
+                      <tr>
+                        <th style="width: 60px;">Rank</th>
+                        <th>Constituent Faculty</th>
+                        <th>Campus</th>
+                        <th class="text-end">Prev IPI</th>
+                        <th class="text-end">Curr IPI</th>
+                        <th class="text-end">Growth</th>
+                        <th class="text-end">Pass (25%)</th>
+                        <th class="text-end">Placement (25%)</th>
+                        <th class="text-end">Fee (20%)</th>
+                        <th class="text-end">Research (15%)</th>
+                        <th class="text-end">SFR (15%)</th>
+                        <th class="text-center">Risk Status</th>
+                        <th class="text-center">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tableAllRankedFacultiesBody">
+                      <!-- Dynamically rendered -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        
+          </div>
+</section>
+
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="py-4 bg-white border-top mt-auto">
+        <div class="container-fluid px-4">
+          <div class="d-flex flex-column flex-md-row align-items-center justify-content-between text-muted small">
+            <div>
+              &copy; 2026 <strong>PK DAS (DEEMED TO BE UNIVERSITY)</strong> &bull; NOVAPORTAL ERP Enterprise Analytics Suite. All Rights Reserved.
+            </div>
+            <div class="d-flex align-items-center gap-3 mt-2 mt-md-0">
+              <span>Bangalore Campus (3 Faculties) &bull; Kochi Campus (7 Faculties)</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
   </div>
+
+  <!-- ========================================================================= -->
+    <!-- WORKFLOW / e-NOTIFICATION APPROVAL MODAL (Requirement 4) -->
+  <div class="modal fade" id="workflowApprovalModal" tabindex="-1" aria-labelledby="workflowApprovalModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content border-0 shadow-lg">
+        
+        <!-- Modal Header -->
+        <div class="drilldown-modal-header d-flex align-items-center justify-content-between p-3" style="background:#1e1b4b; color:#fff;">
+          <div class="d-flex align-items-center gap-3">
+            <span class="badge bg-warning text-dark px-2 py-1 fw-bold fs-6" id="wfModalId">#WF-9821</span>
+            <div>
+              <h5 class="m-0 fw-bold text-white" id="wfModalTitle">End-Semester Exam Moderation Sign-Off</h5>
+              <div class="small text-white text-opacity-75" id="wfModalSubtitle">Faculty of Engineering and Technology - BLR (FET-BLR)</div>
+            </div>
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <button type="button" class="btn btn-sm btn-outline-light px-2 py-1" id="wfModalPrevBtn" onclick="navigateWorkflow(-1)" title="Previous Workflow Request">
+              <i class="bi bi-chevron-left"></i> Prev
+            </button>
+            <button type="button" class="btn btn-sm btn-outline-light px-2 py-1" id="wfModalNextBtn" onclick="navigateWorkflow(1)" title="Next Workflow Request">
+              Next <i class="bi bi-chevron-right"></i>
+            </button>
+            <button type="button" class="btn-close btn-close-white ms-2" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="modal-body p-4" style="background: #f8fafc;">
+          <!-- Meta Bar -->
+          <div class="p-3 mb-3 bg-white rounded border shadow-sm">
+            <div class="row g-2 small">
+              <div class="col-6 col-md-3">
+                <span class="text-muted d-block">Module:</span>
+                <strong class="text-dark" id="wfModalModule">Academic</strong>
+              </div>
+              <div class="col-6 col-md-3">
+                <span class="text-muted d-block">Reported By:</span>
+                <strong class="text-dark" id="wfModalReporter">Dr. R. K. Narayanan (Dean)</strong>
+              </div>
+              <div class="col-6 col-md-3">
+                <span class="text-muted d-block">Assigned To:</span>
+                <span class="badge bg-primary bg-opacity-10 text-primary fw-bold" id="wfModalAssignee">Super Admin</span>
+              </div>
+              <div class="col-6 col-md-3">
+                <span class="text-muted d-block">Priority:</span>
+                <span class="badge bg-danger" id="wfModalPriority">High</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Query Statement & Narrative -->
+          <div class="p-3 mb-3 bg-white rounded border shadow-sm">
+            <h6 class="fw-bold text-navy mb-2"><i class="bi bi-chat-left-text text-primary me-2"></i> Query Details &amp; Justification Note</h6>
+            <p class="text-muted mb-2" id="wfModalQueryText" style="line-height: 1.6; font-size: 0.92rem;">
+              Dean FET submitted odd-semester final examination question bank moderation report. All 18 department board of examiners (BOE) have validated paper schemas, Bloom taxonomy tagging, and external reviewer clearances. Seeking Super Admin final sign-off for controller of examination repository lock.
+            </p>
+            <div class="d-flex align-items-center gap-2 text-muted small pt-2 border-top">
+              <span><i class="bi bi-clock me-1"></i> Submission Date: <strong id="wfModalCreated">17-11-2026</strong></span>
+              <span class="mx-2">&bull;</span>
+              <span><i class="bi bi-person-check me-1"></i> Updated By: <strong id="wfModalUpdatedBy">Controller of Exams</strong></span>
+            </div>
+          </div>
+
+          <!-- Respective Document Viewer Preview -->
+          <div class="p-3 bg-white rounded border shadow-sm">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <h6 class="fw-bold text-navy m-0"><i class="bi bi-file-earmark-pdf-fill text-danger me-2"></i> Attached ERP Verification Document</h6>
+              <span class="badge bg-success bg-opacity-10 text-success"><i class="bi bi-shield-check me-1"></i> Digitally Signed SHA-256</span>
+            </div>
+
+            <!-- Embedded Document Preview Card -->
+            <div class="p-3 rounded border position-relative" style="background-color: #fafbfc; border-left: 4px solid #1e40af !important;">
+              <div class="d-flex align-items-center justify-content-between border-bottom pb-2 mb-2 flex-wrap gap-2">
+                <div>
+                  <strong class="text-navy" id="wfDocName">FET_BLR_OddSem2026_Moderation_Docket_v2.pdf</strong>
+                  <div class="text-muted small">File size: 2.8 MB &bull; ERP Secure Vault Document #DOC-2026-9821</div>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <button type="button" onclick="openWorkflowDocumentViewer()" class="btn btn-sm btn-primary">
+                    <i class="bi bi-eye-fill me-1"></i> View Document
+                  </button>
+                  <button type="button" onclick="downloadWorkflowDocument()" class="btn btn-sm btn-outline-primary">
+                    <i class="bi bi-download me-1"></i> Download
+                  </button>
+                </div>
+              </div>
+              <div class="bg-white p-3 rounded border shadow-xs" style="font-size: 0.88rem; min-height: 130px;">
+                <div class="text-center pb-2 border-bottom mb-2">
+                  <div class="fw-bold text-uppercase text-navy letter-spacing-1" style="font-size: 0.82rem;">PK DAS (DEEMED TO BE UNIVERSITY) &bull; Official Dossier Clearance</div>
+                  <div class="text-muted small">Statutory Academic Moderation &amp; Authentication Clearance Docket</div>
+                </div>
+                <div class="row g-2 py-1">
+                  <div class="col-sm-6"><strong>College:</strong> <span id="wfDocCollege">Faculty of Engineering and Technology (BLR)</span></div>
+                  <div class="col-sm-6"><strong>Academic Year / Sem:</strong> 2026-2027 &bull; Odd Semester</div>
+                  <div class="col-sm-6"><strong>Verification Status:</strong> <span class="badge bg-success bg-opacity-10 text-success fw-bold">Board of Examiners 100% Cleared</span></div>
+                  <div class="col-sm-6"><strong>Audit Category:</strong> Statutory Moderation Sign-Off</div>
+                  <div class="col-12 mt-2 pt-2 border-top">
+                    <div class="d-flex align-items-center justify-content-between mb-1">
+                      <strong class="text-navy small"><i class="bi bi-shield-lock-fill text-primary me-1"></i> Cryptographic Security Hash:</strong>
+                      <span class="badge bg-light text-muted border font-monospace" style="font-size:0.7rem;">SHA-256 Verified Immutable</span>
+                    </div>
+                    <div class="p-2 bg-light rounded border font-monospace text-dark" style="font-size: 0.76rem; word-break: break-all; letter-spacing: 0.5px;" id="wfDocHash">
+                      e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-2 p-2 bg-light rounded text-muted small fst-italic" id="wfDocRemarks">
+                  "Dean's Council Recommendation: All question papers strictly follow OBE attainment models with Course Outcome (CO) mapping verified."
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Footer Actions (Requirement 4: Approve, Reject, Need Clarity) -->
+        <div class="modal-footer d-flex align-items-center justify-content-between p-3 bg-light">
+          <button type="button" class="btn btn-outline-secondary px-3" data-bs-dismiss="modal">
+            <i class="bi bi-x me-1"></i> Close
+          </button>
+          <div class="d-flex align-items-center gap-2">
+            <button type="button" class="btn btn-warning text-dark fw-semibold px-3 shadow-sm" onclick="handleWorkflowAction('Need Clarity')">
+              <i class="bi bi-question-circle-fill me-1"></i> Need Clarity
+            </button>
+            <button type="button" class="btn btn-danger fw-semibold px-3 shadow-sm" onclick="handleWorkflowAction('Rejected')">
+              <i class="bi bi-x-circle-fill me-1"></i> Reject
+            </button>
+            <button type="button" class="btn btn-success fw-semibold px-4 shadow-sm" onclick="handleWorkflowAction('Approved')">
+              <i class="bi bi-check-circle-fill me-1"></i> Approve
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: INSTITUTIONAL FACULTY DRILL-DOWN (ACCESSIBLE FROM EVERY CHART/ROW)   -->
+  <!-- ========================================================================= -->
+  <div class="modal fade" id="collegeDrilldownModal" tabindex="-1" aria-labelledby="collegeDrilldownModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content border-0 shadow-lg">
+        
+        <!-- Modal Header -->
+        <div class="drilldown-modal-header d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center gap-3">
+            <img src="assets/images/pk-das-emblem.png" alt="PK DAS Emblem" style="width: 42px; height: 42px; border-radius: 50%; object-fit: cover; background: #ffffff; border: 2px solid #ffffff; box-shadow: 0 2px 6px rgba(0,0,0,0.25);">
+            <div>
+              <div class="d-flex align-items-center gap-2 flex-wrap">
+                <span class="badge bg-warning text-dark fw-bold" id="modalCollegeCode">FET-BLR</span>
+                <span class="badge bg-light text-primary" id="modalCampusBadge">Bangalore Campus</span>
+                <span class="badge bg-secondary bg-opacity-25 text-white" id="modalEstYear">Est. 2005</span>
+                <span class="badge bg-info text-dark fw-bold" id="modalActiveModuleBadge"><i class="bi bi-clock-history me-1"></i> Attendance Drill-Down</span>
+              </div>
+              <h5 class="modal-title fw-bold text-white mb-0 mt-1" id="modalCollegeName">Faculty of Engineering and Technology - BLR</h5>
+              <div class="text-white text-opacity-75 small">
+                <i class="bi bi-person-fill"></i> Dean: <span id="modalDeanName" class="fw-semibold text-white">Dr. R. K. Narayanan</span> &bull; 
+                <i class="bi bi-envelope"></i> <span id="modalDeanEmail" class="text-white-50">dean.fet.blr@pkdasuniversity.ac.in</span>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="modal-body">
+          
+          <!-- Quick Macro KPI Ribbon -->
+          <div class="drilldown-kpi-ribbon">
+            <div class="drilldown-kpi-pill" id="pillStudents" onclick="window.switchDrilldownTab('students')">
+              <div class="drilldown-kpi-val text-primary" id="modalKpiStudents">4,720</div>
+              <div class="drilldown-kpi-lbl">Students Enrolled</div>
+            </div>
+            <div class="drilldown-kpi-pill" id="pillAttendance" onclick="window.switchDrilldownTab('attendance')">
+              <div class="drilldown-kpi-val text-info" id="modalKpiAttendance">86.40%</div>
+              <div class="drilldown-kpi-lbl">Attendance Rate</div>
+            </div>
+            <div class="drilldown-kpi-pill" id="pillDepts" onclick="window.switchDrilldownTab('depts')">
+              <div class="drilldown-kpi-val text-success" id="modalKpiPass">90.65%</div>
+              <div class="drilldown-kpi-lbl">Pass Percentage</div>
+            </div>
+            <div class="drilldown-kpi-pill" id="pillFinance" onclick="window.switchDrilldownTab('finance')">
+              <div class="drilldown-kpi-val text-warning" id="modalKpiFee">90.15%</div>
+              <div class="drilldown-kpi-lbl">Fee Realized Rate</div>
+            </div>
+            <div class="drilldown-kpi-pill" id="pillPlacement" onclick="window.switchDrilldownTab('placement')">
+              <div class="drilldown-kpi-val text-primary" id="modalKpiPlacement">89.44%</div>
+              <div class="drilldown-kpi-lbl">Placement Rate</div>
+            </div>
+            <div class="drilldown-kpi-pill" id="pillFaculty" onclick="window.switchDrilldownTab('faculty')">
+              <div class="drilldown-kpi-val text-purple" id="modalKpiFaculty">274 (17.2:1)</div>
+              <div class="drilldown-kpi-lbl">Faculty (SFR)</div>
+            </div>
+            <div class="drilldown-kpi-pill" id="pillResearch" onclick="window.switchDrilldownTab('faculty')">
+              <div class="drilldown-kpi-val text-danger" id="modalKpiResearch">242</div>
+              <div class="drilldown-kpi-lbl">Research Papers</div>
+            </div>
+          </div>
+
+          <!-- Tab Navigation -->
+          <ul class="nav nav-tabs drilldown-nav-tabs" id="drilldownTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="tab-attendance-link" data-bs-toggle="tab" data-bs-target="#tab-attendance" type="button" role="tab">
+                <i class="bi bi-clock-history me-1"></i> Attendance &amp; Biometrics
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tab-depts-link" data-bs-toggle="tab" data-bs-target="#tab-depts" type="button" role="tab">
+                <i class="bi bi-diagram-3-fill me-1"></i> Departments &amp; Academics
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tab-students-link" data-bs-toggle="tab" data-bs-target="#tab-students" type="button" role="tab">
+                <i class="bi bi-people-fill me-1"></i> Students &amp; Intake Funnel
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tab-finance-link" data-bs-toggle="tab" data-bs-target="#tab-finance" type="button" role="tab">
+                <i class="bi bi-cash-stack me-1"></i> Financial Ledger &amp; Fees
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tab-faculty-link" data-bs-toggle="tab" data-bs-target="#tab-faculty" type="button" role="tab">
+                <i class="bi bi-person-badge-fill me-1"></i> Faculty &amp; Research
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tab-placement-link" data-bs-toggle="tab" data-bs-target="#tab-placement" type="button" role="tab">
+                <i class="bi bi-briefcase-fill me-1"></i> Placements &amp; Recruiters
+              </button>
+            </li>
+          </ul>
+
+          <!-- Tab Contents -->
+          <div class="tab-content" id="drilldownTabContent">
+            
+            <!-- Tab 1: Attendance & Biometrics -->
+            <div class="tab-pane fade show active" id="tab-attendance" role="tabpanel">
+              <div class="row g-2 mb-2">
+                <div class="col-6 col-md-3">
+                  <div class="metric-pill-box">
+                    <div class="metric-pill-label">Overall Attendance Rate</div>
+                    <div class="metric-pill-value text-primary" id="modalAttOverallPct">84.80%</div>
+                    <div class="metric-pill-sub" id="modalAttYoYSub">+0.90 pp vs Prev Year</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="metric-pill-box">
+                    <div class="metric-pill-label">Safe Compliance (&ge;85%)</div>
+                    <div class="metric-pill-value text-success" id="modalAttAbove85">1,920</div>
+                    <div class="metric-pill-sub" id="modalAttAbove85Sub">61.0% Students on track</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="metric-pill-box">
+                    <div class="metric-pill-label">Moderate Tier (75-84.9%)</div>
+                    <div class="metric-pill-value text-warning" id="modalAttMid75">890</div>
+                    <div class="metric-pill-sub" id="modalAttMid75Sub">Eligible for examinations</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="metric-pill-box">
+                    <div class="metric-pill-label">Detention Watchlist (&lt;75%)</div>
+                    <div class="metric-pill-value text-danger" id="modalAttBelow75">340</div>
+                    <div class="metric-pill-sub" id="modalAttBelow75Sub">265 Condoned • 75 Debarred</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center justify-content-between mb-1 mt-2">
+                <h6 class="fw-bold mb-0 text-dark small"><i class="bi bi-person-check text-primary me-1"></i> Department-wise Biometric Attendance &amp; Detention Risk Ledger</h6>
+                <span class="badge bg-light text-dark border small"><i class="bi bi-shield-check text-success me-1"></i> Regulation 8.4 Compliant</span>
+              </div>
+              <div class="table-responsive">
+                <table class="enterprise-table">
+                  <thead>
+                    <tr>
+                      <th>Dept Code</th>
+                      <th>Department Name</th>
+                      <th>Head of Department (HOD)</th>
+                      <th class="text-end">Enrolled</th>
+                      <th class="text-end">Attendance %</th>
+                      <th class="text-end">Safe (&ge;85%)</th>
+                      <th class="text-end">Moderate (75-84%)</th>
+                      <th class="text-end text-danger">Risk (&lt;75%)</th>
+                      <th class="text-end">Condoned</th>
+                      <th class="text-end">Detained</th>
+                      <th class="text-center">Biometric Status</th>
+                    </tr>
+                  </thead>
+                  <tbody id="modalAttendanceTableBody">
+                    <!-- Populated dynamically -->
+                  </tbody>
+                </table>
+              </div>
+              <div class="p-2 px-3 bg-light border rounded mt-2 d-flex align-items-center justify-content-between small text-muted">
+                <div><i class="bi bi-info-circle text-primary me-1"></i> <strong>Detention Policy:</strong> Attendance &lt; 75% requires IQAC Condonation Committee approval. Below 65% are strictly debarred.</div>
+                <div class="fw-semibold text-success"><i class="bi bi-check-circle-fill me-1"></i> Biometric RFID/Face-Scan Synced</div>
+              </div>
+            </div>
+
+            <!-- Tab 2: Departments & Academics -->
+            <div class="tab-pane fade" id="tab-depts" role="tabpanel">
+              <div class="row g-2 mb-2">
+                <div class="col-6 col-md-3">
+                  <div class="metric-pill-box">
+                    <div class="metric-pill-label">Overall Pass Rate</div>
+                    <div class="metric-pill-value text-success" id="modalAcdPassPct">91.40%</div>
+                    <div class="metric-pill-sub" id="modalAcdPassYoY">+2.00 pp vs Prev Term</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="metric-pill-box">
+                    <div class="metric-pill-label">Students Appeared</div>
+                    <div class="metric-pill-value text-primary" id="modalAcdAppeared">3,080</div>
+                    <div class="metric-pill-sub" id="modalAcdPassed">Passed: 2,815 Students</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="metric-pill-box">
+                    <div class="metric-pill-label">Backlogs &amp; Failed</div>
+                    <div class="metric-pill-value text-danger" id="modalAcdFailed">265</div>
+                    <div class="metric-pill-sub" id="modalAcdArrears">Active Arrears: 210</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="metric-pill-box">
+                    <div class="metric-pill-label">Academic Distinctions</div>
+                    <div class="metric-pill-value text-purple" id="modalAcdDistinctions">910</div>
+                    <div class="metric-pill-sub" id="modalAcdFirstClass">First Class: 1,480</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center justify-content-between mb-1 mt-2">
+                <h6 class="fw-bold mb-0 text-dark small"><i class="bi bi-diagram-3-fill text-primary me-1"></i> Department-wise Academic &amp; Examination Performance</h6>
+                <span class="badge bg-light text-dark border small">Controller of Examinations</span>
+              </div>
+              <div class="table-responsive">
+                <table class="enterprise-table">
+                  <thead>
+                    <tr>
+                      <th>Dept Code</th>
+                      <th>Department Name</th>
+                      <th>Head of Department (HOD)</th>
+                      <th class="text-end">Appeared</th>
+                      <th class="text-end">Passed</th>
+                      <th class="text-end">Failed</th>
+                      <th class="text-end">1 Arrear</th>
+                      <th class="text-end">2 Arrears</th>
+                      <th class="text-end">Arrears &gt; 2</th>
+                      <th class="text-end">Pass %</th>
+                      <th class="text-end">Distinction</th>
+                      <th class="text-end">First Class</th>
+                    </tr>
+                  </thead>
+                  <tbody id="modalDeptsTableBody">
+                    <!-- Populated dynamically -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Tab 3: Students & Intake Funnel -->
+            <div class="tab-pane fade" id="tab-students" role="tabpanel">
+              <div class="row g-2 mb-2">
+                <div class="col-6 col-md-3">
+                  <div class="metric-pill-box">
+                    <div class="metric-pill-label">Total Student Strength</div>
+                    <div class="metric-pill-value text-primary" id="modalStdTotal">3,150</div>
+                    <div class="metric-pill-sub" id="modalStdYoY">+5.7% YoY Growth</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="metric-pill-box">
+                    <div class="metric-pill-label">Program Cadre Split</div>
+                    <div class="metric-pill-value text-dark" id="modalStdCadre">UG: 2,680 | PG: 440</div>
+                    <div class="metric-pill-sub" id="modalStdPhd">Ph.D. Scholars: 30</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="metric-pill-box">
+                    <div class="metric-pill-label">Intake Capacity &amp; Demand</div>
+                    <div class="metric-pill-value text-purple" id="modalStdCap">950 Seats</div>
+                    <div class="metric-pill-sub" id="modalStdApps">4,420 Applications (4.65x)</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="metric-pill-box">
+                    <div class="metric-pill-label">Admissions Confirmed</div>
+                    <div class="metric-pill-value text-success" id="modalStdConf">920</div>
+                    <div class="metric-pill-sub" id="modalStdFillRate">96.8% Seat Fill Rate</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center justify-content-between mb-1 mt-2">
+                <h6 class="fw-bold mb-0 text-dark small"><i class="bi bi-people text-primary me-1"></i> Department-wise Admissions, Intake &amp; Enrollment Distribution</h6>
+                <span class="badge bg-light text-dark border small">Session 2026-2027</span>
+              </div>
+              <div class="table-responsive">
+                <table class="enterprise-table">
+                  <thead>
+                    <tr>
+                      <th>Dept Code</th>
+                      <th>Department Name</th>
+                      <th class="text-end">Sanctioned Seats</th>
+                      <th class="text-end">Applications</th>
+                      <th class="text-end">Confirmed</th>
+                      <th class="text-end">UG Strength</th>
+                      <th class="text-end">PG Strength</th>
+                      <th class="text-end">Ph.D. Scholars</th>
+                      <th class="text-end">Total Enrolled</th>
+                      <th class="text-end">Seat Fill Rate</th>
+                    </tr>
+                  </thead>
+                  <tbody id="modalStudentsTableBody">
+                    <!-- Populated dynamically -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Tab 4: Financial Ledger & Fees -->
+            <div class="tab-pane fade" id="tab-finance" role="tabpanel">
+              <div class="row g-2 mb-2">
+                <div class="col-6 col-md-3">
+                  <div class="metric-pill-box">
+                    <div class="metric-pill-label">Total Fee Demand</div>
+                    <div class="metric-pill-value text-dark" id="modalFeeDemand">₹0.00 Cr</div>
+                    <div class="metric-pill-sub" id="modalFeeDemandYoY">Approved Budget</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="metric-pill-box">
+                    <div class="metric-pill-label">Collected Amount</div>
+                    <div class="metric-pill-value text-success" id="modalFeeCollected">₹0.00 Cr</div>
+                    <div class="metric-pill-sub" id="modalFeeCollectionPctSub">91.65% Realized</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="metric-pill-box">
+                    <div class="metric-pill-label">Outstanding Balance</div>
+                    <div class="metric-pill-value text-danger" id="modalFeeOutstanding">₹0.00 Cr</div>
+                    <div class="metric-pill-sub" id="modalFeeOutstandingSub">Pending Collections</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="metric-pill-box">
+                    <div class="metric-pill-label">Collection Efficiency</div>
+                    <div class="metric-pill-value text-primary" id="modalFeeStatusBadge">On Track</div>
+                    <div class="metric-pill-sub" id="modalFeeEfficiencySub">91.65% Target Met</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center justify-content-between mb-1 mt-2">
+                <h6 class="fw-bold mb-0 text-dark small"><i class="bi bi-cash-stack text-primary me-1"></i> Itemized Revenue Stream Breakdown</h6>
+                <span class="badge bg-light text-dark border small">Finance &amp; Accounts Ledger</span>
+              </div>
+              <div class="table-responsive">
+                <table class="enterprise-table">
+                  <thead>
+                    <tr>
+                      <th>Fee Head</th>
+                      <th class="text-end">Approved Demand</th>
+                      <th class="text-end">Collected Amount</th>
+                      <th class="text-end">Outstanding Balance</th>
+                      <th class="text-end">Realization %</th>
+                    </tr>
+                  </thead>
+                  <tbody id="modalFinanceBreakdownBody">
+                    <!-- Populated dynamically -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Tab 5: Faculty & Research -->
+            <div class="tab-pane fade" id="tab-faculty" role="tabpanel">
+              <div class="row g-2 mb-2">
+                <div class="col-6 col-md-3">
+                  <div class="metric-pill-box">
+                    <div class="metric-pill-label">Faculty Strength &amp; SFR</div>
+                    <div class="metric-pill-value text-primary" id="modalFacultyProfRow">136</div>
+                    <div class="metric-pill-sub" id="modalFacultySfrSub">SFR 23.16:1</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="metric-pill-box">
+                    <div class="metric-pill-label">Ph.D. Qualified Cadre</div>
+                    <div class="metric-pill-value text-success" id="modalFacultyPhdMetric">74 (54.4%)</div>
+                    <div class="metric-pill-sub" id="modalFacultyPhdSub">22 Prof &bull; 38 Assoc</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="metric-pill-box">
+                    <div class="metric-pill-label">Indexed Publications</div>
+                    <div class="metric-pill-value text-purple" id="modalResScopusMetric">98</div>
+                    <div class="metric-pill-sub" id="modalResWosSub">54 Scopus &bull; 38 WoS</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="metric-pill-box">
+                    <div class="metric-pill-label">Citations &amp; Patents</div>
+                    <div class="metric-pill-value text-danger" id="modalResCitMetric">760</div>
+                    <div class="metric-pill-sub" id="modalResPatSub">6 Patents Filed &bull; 2 Granted</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row g-2 mb-2">
+                <div class="col-12 col-md-6">
+                  <div class="p-2 border rounded bg-light">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <span class="fw-bold small"><i class="bi bi-person-badge text-primary me-1"></i> Cadre Breakdown</span>
+                      <span class="badge bg-success" id="modalFacultyPhd">74 Ph.D. (54.4%)</span>
+                    </div>
+                    <div class="d-flex justify-content-between small mb-1">
+                      <span class="text-muted">Professors</span>
+                      <span class="fw-bold" id="modalFacultyProf">22</span>
+                    </div>
+                    <div class="d-flex justify-content-between small mb-1">
+                      <span class="text-muted">Associate Professors</span>
+                      <span class="fw-bold" id="modalFacultyAssoc">38</span>
+                    </div>
+                    <div class="d-flex justify-content-between small">
+                      <span class="text-muted">Assistant Professors</span>
+                      <span class="fw-bold" id="modalFacultyAsst">76</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <div class="p-2 border rounded bg-light">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <span class="fw-bold small"><i class="bi bi-journal-check text-success me-1"></i> Research Portfolio</span>
+                      <span class="badge bg-primary" id="modalResPatents">6 Filed &bull; 2 Granted</span>
+                    </div>
+                    <div class="d-flex justify-content-between small mb-1">
+                      <span class="text-muted">Scopus Indexed</span>
+                      <span class="fw-bold" id="modalResScopus">54</span>
+                    </div>
+                    <div class="d-flex justify-content-between small mb-1">
+                      <span class="text-muted">Web of Science (WoS)</span>
+                      <span class="fw-bold" id="modalResWos">38</span>
+                    </div>
+                    <div class="d-flex justify-content-between small">
+                      <span class="text-muted">Total Citations</span>
+                      <span class="fw-bold" id="modalResCitations">760</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center justify-content-between mb-1">
+                <h6 class="fw-bold mb-0 text-dark small"><i class="bi bi-journal-text text-primary me-1"></i> Department-wise Research Contribution</h6>
+                <span class="badge bg-light text-dark border small">Dean (R&amp;D)</span>
+              </div>
+              <div class="table-responsive">
+                <table class="enterprise-table">
+                  <thead>
+                    <tr>
+                      <th>Dept Code</th>
+                      <th>Department Name</th>
+                      <th class="text-end">Faculty Count</th>
+                      <th class="text-end">Ph.D. Holders</th>
+                      <th class="text-end">Scopus Pubs</th>
+                      <th class="text-end">Citations</th>
+                      <th class="text-end">Patents Filed</th>
+                      <th class="text-end">RPF Index</th>
+                    </tr>
+                  </thead>
+                  <tbody id="modalFacultyResearchTableBody">
+                    <!-- Populated dynamically -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Tab 6: Placements & Recruiters -->
+            <div class="tab-pane fade" id="tab-placement" role="tabpanel">
+              <div class="row g-2 mb-2">
+                <div class="col-6 col-md-3">
+                  <div class="metric-pill-box">
+                    <div class="metric-pill-label">Placement Rate</div>
+                    <div class="metric-pill-value text-success" id="modalPlcRate">86.81%</div>
+                    <div class="metric-pill-sub" id="modalPlcRateSub">vs Prev 84.80% (+2.01 pp)</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="metric-pill-box">
+                    <div class="metric-pill-label">Placed Students</div>
+                    <div class="metric-pill-value text-primary" id="modalPlcPlacedMetric">625 / 720</div>
+                    <div class="metric-pill-sub" id="modalPlcEligibleSub">780 Total Offers Made</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="metric-pill-box">
+                    <div class="metric-pill-label">Highest Package (LPA)</div>
+                    <div class="metric-pill-value text-danger" id="modalPlcHighMetric">₹18.50 LPA</div>
+                    <div class="metric-pill-sub" id="modalPlcAvgSub">Avg: ₹6.20 LPA &bull; Med: ₹5.80 LPA</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="metric-pill-box">
+                    <div class="metric-pill-label">Corporate Partners</div>
+                    <div class="metric-pill-value text-purple" id="modalPlcCompaniesMetric">92 Partners</div>
+                    <div class="metric-pill-sub" id="modalPlcOffersSub">110 Dream Offers (&ge;10 LPA)</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center justify-content-between mb-1 mt-2">
+                <h6 class="fw-bold mb-0 text-dark small"><i class="bi bi-briefcase text-primary me-1"></i> Key Recruiter Partners &amp; Campus Recruitment Drives</h6>
+                <span class="badge bg-light text-dark border small">Corporate Relations</span>
+              </div>
+              <div class="table-responsive">
+                <table class="enterprise-table">
+                  <thead>
+                    <tr>
+                      <th>Corporate Partner</th>
+                      <th>Recruitment Domain</th>
+                      <th class="text-end">Salary Package Offered</th>
+                      <th class="text-end">Total Offers Made</th>
+                    </tr>
+                  </thead>
+                  <tbody id="modalRecruitersTableBody">
+                    <!-- Populated dynamically -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="modal-footer bg-light d-flex justify-content-between">
+          <div>
+            <button type="button" class="btn btn-sm btn-outline-primary" id="btnFilterToCollege">
+              <i class="bi bi-filter"></i> Set Dashboard Filter to this Faculty
+            </button>
+            <button type="button" class="btn btn-sm btn-outline-secondary ms-2" onclick="window.print()">
+              <i class="bi bi-printer"></i> Print Dossier
+            </button>
+          </div>
+          <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- MODAL: INTERACTIVE KPI CLICK-TO-COMPARE (CURRENT VS PREVIOUS PERIOD)      -->
+  <!-- ========================================================================= -->
+  <div class="modal fade" id="kpiCompareModal" tabindex="-1" aria-labelledby="kpiCompareModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content border-0 shadow-lg">
+        
+        <!-- Modal Header (User Theme #E1E6FF Blue) -->
+        <div class="kpi-modal-header d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center gap-3">
+            <div class="kpi-modal-icon-badge" id="modalKpiIconBadge">
+              <i class="bi bi-mortarboard-fill" id="modalKpiIcon"></i>
+            </div>
+            <div>
+              <div class="d-flex align-items-center gap-2 flex-wrap">
+                <span class="badge bg-primary text-white fw-bold" id="modalKpiBadgeCategory">EXECUTIVE KPI</span>
+                <span class="badge bg-light text-dark border" id="modalKpiFilterCampus">All Campuses (BLR &amp; KOCHI)</span>
+                <span class="badge bg-light text-dark border" id="modalKpiFilterPeriod">Current vs Previous AY Comparison</span>
+              </div>
+              <h4 class="modal-title fw-bold text-navy mb-0 mt-1" id="modalKpiTitle">Total Student Strength Comparison</h4>
+              <div class="text-muted small">
+                <i class="bi bi-info-circle me-1"></i> Comparative Analysis &bull; <span id="modalKpiSubtitle">Audited ERP Institutional Records across active faculties</span>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="modal-body p-4 bg-light bg-opacity-50">
+          
+          <!-- Top Macro Comparison Strip -->
+          <div class="kpi-compare-macro-strip">
+            
+            <!-- Card 1: Previous Period Value -->
+            <div class="kpi-macro-card">
+              <div class="kpi-macro-title">
+                <i class="bi bi-calendar-minus"></i> <span id="modalKpiPrevPeriodLabel">Previous Period</span>
+              </div>
+              <div class="kpi-macro-val text-muted" id="modalKpiPrevVal">-</div>
+              <div class="kpi-macro-sub text-muted" id="modalKpiPrevSub">Benchmark Baseline</div>
+            </div>
+
+            <!-- Card 2: Current Period Value -->
+            <div class="kpi-macro-card highlight">
+              <div class="kpi-macro-title text-primary">
+                <i class="bi bi-calendar-check"></i> <span id="modalKpiCurrPeriodLabel">Current Period</span>
+              </div>
+              <div class="kpi-macro-val text-primary" id="modalKpiCurrVal">-</div>
+              <div class="kpi-macro-sub text-primary fw-bold" id="modalKpiCurrSub">Active Period</div>
+            </div>
+
+            <!-- Card 3: Absolute Variance -->
+            <div class="kpi-macro-card">
+              <div class="kpi-macro-title">
+                <i class="bi bi-arrow-left-right"></i> Absolute Variance
+              </div>
+              <div class="kpi-macro-val text-success" id="modalKpiAbsDiff">-</div>
+              <div class="kpi-macro-sub text-success" id="modalKpiAbsDiffSub">Net Period Difference</div>
+            </div>
+
+            <!-- Card 4: Growth Percentage -->
+            <div class="kpi-macro-card">
+              <div class="kpi-macro-title">
+                <i class="bi bi-graph-up-arrow"></i> Growth Rate (%)
+              </div>
+              <div class="kpi-macro-val text-success" id="modalKpiPctGrowth">-</div>
+              <div class="kpi-macro-sub" id="modalKpiPctGrowthSub">Period-over-Period</div>
+            </div>
+
+            <!-- Card 5: Institutional Benchmark / Norm -->
+            <div class="kpi-macro-card">
+              <div class="kpi-macro-title">
+                <i class="bi bi-bullseye"></i> Institutional Benchmark
+              </div>
+              <div class="kpi-macro-val" style="font-size:1.15rem;" id="modalKpiBenchmark">-</div>
+              <div class="kpi-macro-sub text-success" id="modalKpiBenchmarkStatus">Norm Compliant</div>
+            </div>
+
+          </div>
+
+          <!-- 3 Tabs Navigation -->
+          <ul class="nav nav-tabs kpi-modal-tabs border-bottom mb-3" id="kpiCompareTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="tabKpiOverviewBtn" data-bs-toggle="tab" data-bs-target="#tabKpiOverview" type="button" role="tab">
+                <i class="bi bi-grid-1x2-fill me-1"></i> 1. Overview &amp; Sub-Metrics
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tabKpiCollegesBtn" data-bs-toggle="tab" data-bs-target="#tabKpiColleges" type="button" role="tab">
+                <i class="bi bi-buildings-fill me-1"></i> 2. College-wise Comparison (10 Faculties)
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tabKpiTrendBtn" data-bs-toggle="tab" data-bs-target="#tabKpiTrend" type="button" role="tab">
+                <i class="bi bi-graph-up me-1"></i> 3. Trend Analysis &amp; Rankings
+              </button>
+            </li>
+          </ul>
+
+          <!-- Tab Content Panes -->
+          <div class="tab-content" id="kpiCompareTabContent">
+            
+            <!-- TAB 1: OVERVIEW -->
+            <div class="tab-pane fade show active" id="tabKpiOverview" role="tabpanel">
+              <div class="row g-3">
+                <!-- Grouped Bar Chart: Previous vs Current across Key Dimensions -->
+                <div class="col-12 col-lg-8">
+                  <div class="kpi-detail-card">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                      <h6 class="fw-bold mb-0 text-navy">
+                        <i class="bi bi-bar-chart-fill text-primary me-2"></i>
+                        <span id="overviewChartTitle">Dimension-wise Current vs Previous Comparison</span>
+                      </h6>
+                      <span class="badge bg-light text-secondary border">Grouped Metric Comparison</span>
+                    </div>
+                    <div id="chartKpiCompareOverview" class="chart-compare-container" style="min-height: 380px; height: 380px; width: 100%; display: block;"></div>
+                  </div>
+                </div>
+
+                <!-- Quick Highlights & Sub-Metric Cards -->
+                <div class="col-12 col-lg-4">
+                  <div class="kpi-detail-card">
+                    <h6 class="fw-bold mb-3 text-navy">
+                      <i class="bi bi-pie-chart-fill text-purple me-2"></i>
+                      Executive Breakdown
+                    </h6>
+                    <div id="kpiOverviewCardsContainer" class="d-flex flex-column gap-2 mb-3">
+                      <!-- Populated dynamically -->
+                    </div>
+                    <div class="p-3 bg-light rounded-3 border">
+                      <div class="fw-bold small mb-1 text-dark"><i class="bi bi-shield-check text-success me-1"></i> ERP Data Integrity</div>
+                      <div class="text-muted" style="font-size:0.75rem;">All comparisons are computed dynamically from verified institutional ledgers and aggregated according to active campus and faculty filters.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB 2: COLLEGE-WISE COMPARISON (ALL 10 FACULTIES) -->
+            <div class="tab-pane fade" id="tabKpiColleges" role="tabpanel">
+              <div class="row g-3">
+                <!-- Horizontal Comparison Bar Chart for all 10 faculties -->
+                <div class="col-12">
+                  <div class="kpi-detail-card">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                      <h6 class="fw-bold mb-0 text-navy">
+                        <i class="bi bi-bar-chart-steps text-primary me-2"></i>
+                        Faculty-wise Comparison: Previous vs Current Period
+                      </h6>
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="badge bg-primary">Current Period</span>
+                        <span class="badge bg-secondary">Previous Period</span>
+                      </div>
+                    </div>
+                    <div id="chartKpiCompareColleges" class="chart-compare-container" style="min-height: 420px; height: 420px; width: 100%; display: block;"></div>
+                  </div>
+                </div>
+
+                <!-- Complete Comparative Ledger Table -->
+                <div class="col-12">
+                  <div class="kpi-detail-card">
+                    <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
+                      <div>
+                        <h6 class="fw-bold mb-0 text-navy">
+                          <i class="bi bi-table text-primary me-2"></i>
+                          Constituent Faculties Comparison Ledger
+                        </h6>
+                        <small class="text-muted">Click any row or faculty code to open full departmental dossier</small>
+                      </div>
+                      <div class="d-flex align-items-center gap-2">
+                        <input type="text" id="kpiTableSearch" class="form-control form-control-sm" placeholder="Search faculty..." style="width: 200px;">
+                      </div>
+                    </div>
+                    <div class="table-responsive">
+                      <table class="table kpi-compare-table table-hover align-middle">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>Faculty / Institution</th>
+                            <th>Campus</th>
+                            <th class="text-end" id="thPrevPeriod">Previous Period</th>
+                            <th class="text-end" id="thCurrPeriod">Current Period</th>
+                            <th class="text-end">Variance (&Delta;)</th>
+                            <th class="text-end">Growth %</th>
+                            <th>Performance Status</th>
+                          </tr>
+                        </thead>
+                        <tbody id="kpiCompareTableBody">
+                          <!-- Populated dynamically -->
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB 3: TREND ANALYSIS & RANKINGS -->
+            <div class="tab-pane fade" id="tabKpiTrend" role="tabpanel">
+              <div class="row g-3">
+                <!-- Multi-Period Trajectory Line Chart -->
+                <div class="col-12 col-lg-8">
+                  <div class="kpi-detail-card">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                      <h6 class="fw-bold mb-0 text-navy">
+                        <i class="bi bi-graph-up text-primary me-2"></i>
+                        Multi-Period Trajectory &amp; Growth Curve
+                      </h6>
+                      <span class="badge bg-light text-secondary border">Longitudinal Performance</span>
+                    </div>
+                    <div id="chartKpiCompareTrend" class="chart-compare-container" style="min-height: 380px; height: 380px; width: 100%; display: block;"></div>
+                  </div>
+                </div>
+
+                <!-- Top 5 & Bottom 5 Rankings -->
+                <div class="col-12 col-lg-4">
+                  <div class="kpi-detail-card">
+                    <!-- Top 5 -->
+                    <h6 class="fw-bold text-success mb-2" style="font-size:0.85rem;">
+                      <i class="bi bi-trophy-fill text-warning me-1"></i> Top Performing Faculties
+                    </h6>
+                    <div id="kpiTop5Rankings" class="mb-3">
+                      <!-- Populated dynamically -->
+                    </div>
+
+                    <hr class="my-2">
+
+                    <!-- Bottom 5 -->
+                    <h6 class="fw-bold text-warning mb-2" style="font-size:0.85rem;">
+                      <i class="bi bi-exclamation-triangle-fill text-warning me-1"></i> Faculties Requiring Attention
+                    </h6>
+                    <div id="kpiBottom5Rankings">
+                      <!-- Populated dynamically -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="modal-footer bg-light d-flex justify-content-between align-items-center py-2 px-4">
+          <div class="d-flex align-items-center gap-2">
+            <button type="button" class="btn btn-sm btn-outline-success" id="btnExportKpiExcel">
+              <i class="bi bi-file-earmark-excel-fill me-1"></i> Export to Excel (CSV)
+            </button>
+            <button type="button" class="btn btn-sm btn-outline-secondary" id="btnExportKpiPdf">
+              <i class="bi bi-printer-fill me-1"></i> Print / PDF Dossier
+            </button>
+          </div>
+          <div>
+            <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">
+              <i class="bi bi-x-lg me-1"></i> Close
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: IPI TRANSPARENT SCORING METHODOLOGY -->
+  <div class="modal fade" id="ipiMethodologyModal" tabindex="-1" aria-labelledby="ipiMethodologyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content shadow-lg border-0">
+        <div class="modal-header" style="background-color: #e1e6ff; color: #1e1b4b;">
+          <div>
+            <h5 class="modal-title fw-bold" id="ipiMethodologyModalLabel">
+              <i class="bi bi-calculator text-primary me-2"></i>Institutional Performance Index (IPI) Scoring Methodology
+            </h5>
+            <div class="small text-muted">Statutory Multi-Vector Academic, Financial &amp; Governance Evaluation Framework</div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="alert alert-primary bg-primary bg-opacity-10 border-primary border-opacity-25 mb-4">
+            <div class="fw-bold text-navy mb-1"><i class="bi bi-braces me-1"></i> Transparent Composite Score Formula</div>
+            <div class="font-monospace small text-dark p-2 bg-white rounded border">
+              Composite IPI = (Pass Rate × 0.25) + (Placement Rate × 0.25) + (Fee Realization × 0.20) + (Research RPF × 0.15) + (SFR Compliance × 0.15)
+            </div>
+          </div>
+
+          <h6 class="fw-bold mb-3"><i class="bi bi-shield-check text-success me-1"></i> Multi-Vector Weighting Matrix</h6>
+          <div class="table-responsive">
+            <table class="enterprise-table">
+              <thead>
+                <tr>
+                  <th>Evaluation Pillar</th>
+                  <th>Weight</th>
+                  <th>Institutional Raw Metric</th>
+                  <th>Weighted Contribution</th>
+                  <th>Statutory Authority</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Academic Pass Rate</strong></td>
+                  <td><span class="badge bg-primary">25%</span></td>
+                  <td>90.25% (Pass / Appeared)</td>
+                  <td><strong>+22.56 pts</strong></td>
+                  <td>NAAC Criterion II: Teaching-Learning &amp; Evaluation</td>
+                </tr>
+                <tr>
+                  <td><strong>Graduate Placement Rate</strong></td>
+                  <td><span class="badge bg-primary">25%</span></td>
+                  <td>89.28% (Placed / Eligible)</td>
+                  <td><strong>+22.32 pts</strong></td>
+                  <td>NIRF Metric: Student Placement &amp; Higher Studies</td>
+                </tr>
+                <tr>
+                  <td><strong>Annual Fee Realization</strong></td>
+                  <td><span class="badge bg-primary">20%</span></td>
+                  <td>90.18% (Collected / Demand)</td>
+                  <td><strong>+18.04 pts</strong></td>
+                  <td>Finance Committee Statutory Target (&ge; 90%)</td>
+                </tr>
+                <tr>
+                  <td><strong>Research Productivity</strong></td>
+                  <td><span class="badge bg-primary">15%</span></td>
+                  <td>RPF 1.22 (Scaled to 1.50 norm)</td>
+                  <td><strong>+12.20 pts</strong></td>
+                  <td>NAAC Criterion III: Research &amp; Scopus Citations</td>
+                </tr>
+                <tr>
+                  <td><strong>Faculty SFR Governance</strong></td>
+                  <td><span class="badge bg-primary">15%</span></td>
+                  <td>17.59 : 1 (&le; 20:1 statutory ceiling)</td>
+                  <td><strong>+15.00 pts</strong></td>
+                  <td>AICTE / UGC Statutory Faculty Ratio Norms</td>
+                </tr>
+                <tr class="table-light fw-bold">
+                  <td>Composite Score</td>
+                  <td>100%</td>
+                  <td>Autonomous Benchmark: 90.00</td>
+                  <td class="text-success fs-6">90.45 / 100</td>
+                  <td><span class="badge bg-success">Grade A++ Autonomous Excellence</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mt-4 p-3 bg-light rounded border">
+            <h6 class="fw-bold mb-2"><i class="bi bi-info-circle text-primary me-1"></i> Institutional Performance Tiers</h6>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge bg-success p-2">Tier 1 (&ge; 92.0): Exemplary Autonomous Performance</span>
+              <span class="badge bg-primary p-2">Tier 2 (88.0 - 91.9): High Autonomous Standard</span>
+              <span class="badge bg-warning text-dark p-2">Tier 3 (&lt; 88.0): Statutory Intervention Watch</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer bg-light">
+          <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING DRILL-DOWN TOAST NOTIFICATION -->
+  <div id="drilldownToast" class="drilldown-toast p-3 d-none align-items-center gap-3">
+    <img src="assets/images/pk-das-emblem.png" alt="PK DAS" style="width: 28px; height: 28px; border-radius: 50%; object-fit: cover; background: #ffffff; border: 1px solid #ffffff;">
+    <div>
+      <div class="fw-bold text-white small" id="toastTitle">Faculty Drill-Down Activated</div>
+      <div class="text-white-50 text-truncate" style="max-width:280px; font-size:0.75rem;" id="toastDesc">Loading granular performance records...</div>
+    </div>
+    <button type="button" class="btn-close btn-close-white ms-auto" onclick="document.getElementById('drilldownToast').classList.add('d-none')"></button>
+  </div>
+
+  <!-- Bootstrap 5 Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Apache ECharts 5.5 -->
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+
+  <!-- High-Fidelity Dataset Engine -->
+  <script src="assets/js/dashboard-data.js"></script>
+
+  <!-- JAIN / NOVAPORTAL Core Dashboard Logic -->
+  <script src="assets/js/dashboard.js"></script>
+
+
+  <!-- ========================================================================= -->
+  <!-- WORKFLOW OFFICIAL DOCUMENT VIEWER MODAL (Requirement 1) -->
+  <!-- ========================================================================= -->
+  <div class="modal fade" id="workflowDocumentViewerModal" tabindex="-1" aria-labelledby="workflowDocumentViewerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content border-0 shadow-lg">
+        <div class="drilldown-modal-header d-flex align-items-center justify-content-between p-3" style="background:#0f172a; color:#fff;">
+          <div class="d-flex align-items-center gap-3">
+            <span class="badge bg-primary text-white px-2 py-1 font-monospace" id="docViewerBadge">#DOC-2026-9821</span>
+            <div>
+              <h5 class="m-0 fw-bold text-white fs-6" id="docViewerTitle">Official ERP Statutory Dossier Viewer</h5>
+              <div class="small text-white text-opacity-75" id="docViewerSubtitle">PK DAS (DEEMED TO BE UNIVERSITY) Enterprise Clearance Record</div>
+            </div>
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <button type="button" class="btn btn-sm btn-success px-3" onclick="downloadWorkflowDocument()">
+              <i class="bi bi-download me-1"></i> Download PDF
+            </button>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="modal-body p-4 bg-secondary bg-opacity-10">
+          <div class="bg-white p-4 p-md-5 rounded shadow-sm border mx-auto" style="max-width: 850px; min-height: 700px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            <!-- Document Header -->
+            <div class="text-center pb-3 border-bottom mb-4">
+              <img src="assets/images/pk-das-logo.jpg" alt="PK DAS (DEEMED TO BE UNIVERSITY)" style="height: 52px; width: auto; object-fit: contain; margin-bottom: 8px;">
+              <div class="fw-bold text-navy" style="font-size: 1.3rem; letter-spacing: 0.5px;">PK DAS (DEEMED TO BE UNIVERSITY)</div>
+              <div class="text-muted small text-uppercase">Office of the Controller of Examinations &amp; Statutory Academic Council</div>
+              <div class="text-muted small">Center of Academic Excellence &bull; Deemed to be University under Section 3 of UGC Act 1956</div>
+              <div class="badge bg-primary bg-opacity-10 text-primary mt-2 px-3 py-1 font-monospace" style="font-size:0.8rem;">CONFIDENTIAL STATUTORY AUDIT DOSSIER</div>
+            </div>
+
+            <!-- Meta details table -->
+            <div class="row g-3 mb-4">
+              <div class="col-6 col-md-3">
+                <span class="text-muted small d-block">Document Code:</span>
+                <strong class="text-dark font-monospace" id="docViewCode">DOC-2026-9821</strong>
+              </div>
+              <div class="col-6 col-md-3">
+                <span class="text-muted small d-block">Academic Year:</span>
+                <strong class="text-dark">2026-2027 (Odd Sem)</strong>
+              </div>
+              <div class="col-6 col-md-3">
+                <span class="text-muted small d-block">Submission Date:</span>
+                <strong class="text-dark" id="docViewDate">17-Nov-2026</strong>
+              </div>
+              <div class="col-6 col-md-3">
+                <span class="text-muted small d-block">Classification:</span>
+                <span class="badge bg-success">Executive Verified</span>
+              </div>
+            </div>
+
+            <!-- Content Body -->
+            <div class="p-3 bg-light rounded border mb-4">
+              <h6 class="fw-bold text-navy mb-2"><i class="bi bi-check2-circle text-success me-1"></i> Academic Moderation Clearance Summary</h6>
+              <p class="text-secondary small mb-2" id="docViewSummary" style="line-height: 1.6;">
+                The Board of Examiners (BOE) convened to conduct comprehensive moderation and Bloom taxonomy alignment for the odd-semester examinations across all constituent departments. All external reviewer marks variations have been normalized within statutory ±3.5% bounds. Question bank schemas are validated for higher-order cognitive attainment.
+              </p>
+              <ul class="small text-muted ps-3 mb-0" id="docViewChecklist">
+                <li>Course Outcome (CO) &bull; Program Outcome (PO) mapping: <strong>100% Attained</strong></li>
+                <li>External Reviewer Endorsement Signatures: <strong>Validated &amp; Recorded</strong></li>
+                <li>Digital Security Hash Registry: <strong>Matched against COE Central Key Store</strong></li>
+              </ul>
+            </div>
+
+            <!-- Audit Trail & Signatures -->
+            <div class="row g-3 pt-3 border-top mt-4 text-center">
+              <div class="col-4">
+                <div class="border-top pt-2 mx-auto" style="max-width: 180px;">
+                  <div class="text-success small fw-bold"><i class="bi bi-check-all"></i> Digitally Signed</div>
+                  <div class="fw-bold text-dark small" id="docViewSignDean">Dr. R. K. Narayanan</div>
+                  <div class="text-muted" style="font-size:0.7rem;">Dean of Faculty</div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="border-top pt-2 mx-auto" style="max-width: 180px;">
+                  <div class="text-success small fw-bold"><i class="bi bi-check-all"></i> Digitally Signed</div>
+                  <div class="fw-bold text-dark small">Dr. K. S. Sundaram</div>
+                  <div class="text-muted" style="font-size:0.7rem;">Controller of Examinations</div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="border-top pt-2 mx-auto" style="max-width: 180px;">
+                  <div class="text-primary small fw-bold"><i class="bi bi-clock-history"></i> Pending Action</div>
+                  <div class="fw-bold text-dark small">Vice Chancellor / Super Admin</div>
+                  <div class="text-muted" style="font-size:0.7rem;">Final Sign-Off Clearance</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Security Footer -->
+            <div class="mt-4 pt-3 border-top text-center text-muted" style="font-size:0.7rem;">
+              <div>This official document is generated from PK DAS (DEEMED TO BE UNIVERSITY) Core ERP. Tampering or unauthorized redistribution is strictly prohibited.</div>
+              <div class="font-monospace text-secondary mt-1" id="docViewHashBottom">SHA-256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer p-3 bg-light">
+          <button type="button" class="btn btn-outline-secondary px-3" data-bs-dismiss="modal">Close Document</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- CREATE INTERVENTION TICKET MODAL (Requirement 11) -->
+  <!-- ========================================================================= -->
+  <div class="modal fade" id="createTicketModal" tabindex="-1" aria-labelledby="createTicketModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg">
+        <div class="drilldown-modal-header p-3 d-flex align-items-center justify-content-between" style="background:#0f172a; color:#fff;">
+          <div class="d-flex align-items-center gap-2">
+            <span class="badge bg-danger text-white"><i class="bi bi-ticket-detailed-fill me-1"></i> Executive ERP Ticket</span>
+            <h5 class="m-0 fw-bold text-white fs-6" id="ticketModalTitle">Create Administrative Intervention Ticket</h5>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-3 bg-light">
+          <form id="createTicketForm" onsubmit="event.preventDefault(); submitInterventionTicket();">
+            <div class="p-2 mb-3 bg-white rounded border">
+              <div class="d-flex align-items-center justify-content-between mb-1">
+                <span class="text-muted small">Generated Ticket Reference:</span>
+                <span class="badge bg-primary font-monospace" id="ticketRefCode">#TCK-2026-8941</span>
+              </div>
+              <div class="small text-navy fw-bold" id="ticketTargetCollege">Faculty of Engineering and Technology - BLR</div>
+              <div class="small text-muted" id="ticketAlertSummary">Fee Collection Realization Deficit Watch</div>
+            </div>
+
+            <div class="mb-2">
+              <label class="form-label small fw-bold text-dark mb-1">Assign Responsible Authority <span class="text-danger">*</span></label>
+              <select class="form-select form-select-sm" id="ticketAssignee" required>
+                <option value="Dean of Faculty">Dean of Faculty</option>
+                <option value="Controller of Examinations">Controller of Examinations (CoE)</option>
+                <option value="Director of Finance & Accounts">Director of Finance &amp; Accounts</option>
+                <option value="Director of Placements & Corporate Relations">Director of Placements &amp; Corporate Relations</option>
+                <option value="Academic Registrar">Academic Registrar</option>
+                <option value="Head of Department (HOD)">Head of Department (HOD)</option>
+              </select>
+            </div>
+
+            <div class="row g-2 mb-2">
+              <div class="col-6">
+                <label class="form-label small fw-bold text-dark mb-1">Intervention Priority</label>
+                <select class="form-select form-select-sm" id="ticketPriority">
+                  <option value="Critical - Immediate Action">Critical - Immediate Action</option>
+                  <option value="High Priority" selected>High Priority</option>
+                  <option value="Medium - Normal Queue">Medium - Normal Queue</option>
+                </select>
+              </div>
+              <div class="col-6">
+                <label class="form-label small fw-bold text-dark mb-1">Statutory SLA Target</label>
+                <select class="form-select form-select-sm" id="ticketSla">
+                  <option value="24 Hours (Urgent Redressal)">24 Hours (Urgent)</option>
+                  <option value="48 Hours (Standard Compliance)" selected>48 Hours (Standard)</option>
+                  <option value="5 Working Days">5 Working Days</option>
+                  <option value="Before Next Syndicate Meeting">Before Next Syndicate</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label small fw-bold text-dark mb-1">Super Admin Directives &amp; Actionable Instructions <span class="text-danger">*</span></label>
+              <textarea class="form-control form-control-sm" id="ticketInstructions" rows="3" required placeholder="Specify remedial instructions, audit requirements, or corrective actions..."></textarea>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-between pt-2 border-top">
+              <button type="button" class="btn btn-sm btn-outline-secondary px-3" data-bs-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-sm btn-primary fw-bold px-3">
+                <i class="bi bi-send-check-fill me-1"></i> Issue &amp; Dispatch Ticket
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Back to Top Button (Requirement 3) -->
+  <button id="btnBackToTop" type="button" title="Back to Top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+    <i class="bi bi-arrow-up"></i>
+  </button>
 </body>
 </html>
