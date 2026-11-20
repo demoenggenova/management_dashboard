@@ -324,6 +324,91 @@ window.NovaPortalData = (function () {
       };
     });
 
+    const collegeRecruiters = {
+      1: [
+        { company: 'Microsoft', packages: '42.0 - 52.0 LPA', offers: 28, category: 'Super Dream (Cloud & AI)' },
+        { company: 'Amazon AWS', packages: '28.0 - 45.0 LPA', offers: 46, category: 'Product & Systems' },
+        { company: 'Google Cloud India', packages: '32.0 - 48.0 LPA', offers: 14, category: 'Core Platform Engineering' },
+        { company: 'Cisco Systems', packages: '18.0 - 24.5 LPA', offers: 38, category: 'Network Software' },
+        { company: 'Texas Instruments', packages: '22.0 - 30.0 LPA', offers: 22, category: 'Embedded & VLSI' },
+        { company: 'Bosch Global Software', packages: '11.0 - 15.5 LPA', offers: 85, category: 'Mobility & Automation' },
+        { company: 'Infosys Wingspan / Cobalt', packages: '6.5 - 9.5 LPA', offers: 240, category: 'Digital Solutions' }
+      ],
+      2: [
+        { company: 'Deloitte USI', packages: '8.5 - 13.0 LPA', offers: 112, category: 'Audit & Advisory' },
+        { company: 'Ernst & Young (EY)', packages: '8.0 - 12.5 LPA', offers: 96, category: 'Tax & Forensics' },
+        { company: 'PricewaterhouseCoopers (PwC)', packages: '8.5 - 12.0 LPA', offers: 84, category: 'Financial Assurance' },
+        { company: 'KPMG India', packages: '7.8 - 11.5 LPA', offers: 78, category: 'Risk & Strategy' },
+        { company: 'JP Morgan Chase', packages: '14.0 - 18.5 LPA', offers: 32, category: 'Corporate Banking' },
+        { company: 'Morgan Stanley', packages: '15.0 - 20.0 LPA', offers: 26, category: 'Global Finance' },
+        { company: 'Grant Thornton', packages: '7.0 - 10.0 LPA', offers: 64, category: 'Statutory Valuation' }
+      ],
+      3: [
+        { company: 'McKinsey & Company', packages: '24.0 - 32.0 LPA', offers: 16, category: 'Strategic Consulting' },
+        { company: 'Boston Consulting Group (BCG)', packages: '26.0 - 34.0 LPA', offers: 12, category: 'Management Advisory' },
+        { company: 'Amazon (Operations & Ops)', packages: '18.0 - 24.0 LPA', offers: 34, category: 'Program Management' },
+        { company: 'HDFC Bank Corporate', packages: '12.0 - 16.5 LPA', offers: 68, category: 'Wholesale Lending' },
+        { company: 'ITC Limited', packages: '16.0 - 22.0 LPA', offers: 22, category: 'FMCG Brand Management' },
+        { company: 'Tata Consultancy Services (Management)', packages: '9.0 - 13.5 LPA', offers: 95, category: 'Business Analysis' },
+        { company: 'Hindustan Unilever (HUL)', packages: '19.0 - 25.0 LPA', offers: 18, category: 'Supply Chain Strategy' }
+      ],
+      4: [
+        { company: 'Oracle Cloud Infrastructure', packages: '20.0 - 28.0 LPA', offers: 24, category: 'Enterprise Cloud' },
+        { company: 'Cognizant Digital', packages: '7.0 - 11.0 LPA', offers: 86, category: 'Full Stack & Web3' },
+        { company: 'Wipro Technologies', packages: '6.5 - 9.5 LPA', offers: 92, category: 'Enterprise Apps' },
+        { company: 'UST Global', packages: '7.5 - 11.5 LPA', offers: 74, category: 'Digital Transformation' },
+        { company: 'IBS Software', packages: '8.0 - 12.0 LPA', offers: 58, category: 'Aviation SaaS' },
+        { company: 'Zoho Corporation', packages: '9.0 - 14.0 LPA', offers: 42, category: 'Product Engineering' }
+      ],
+      5: [
+        { company: 'Oxford University Press', packages: '7.5 - 10.5 LPA', offers: 28, category: 'Academic Publishing & Editorial' },
+        { company: 'Times Internet Digital Media', packages: '8.0 - 11.5 LPA', offers: 36, category: 'Digital Journalism & Content' },
+        { company: 'BBC World Service India', packages: '9.5 - 13.0 LPA', offers: 16, category: 'Broadcasting & Research' },
+        { company: 'Teach For India / Azim Premji Org', packages: '6.5 - 9.0 LPA', offers: 44, category: 'Public Policy & Outreach' },
+        { company: 'Edelman Communications', packages: '8.5 - 12.0 LPA', offers: 24, category: 'Public Relations & Strategic Comm' },
+        { company: 'Amnesty International India', packages: '7.0 - 9.5 LPA', offers: 18, category: 'Development & Social Advocacy' }
+      ],
+      6: [
+        { company: 'Tata Elxsi Design Studio', packages: '12.0 - 18.5 LPA', offers: 38, category: 'Industrial & UX Design' },
+        { company: 'Adobe Systems Design Lab', packages: '22.0 - 32.0 LPA', offers: 14, category: 'Creative Technologies' },
+        { company: 'Ogilvy & Mather Global', packages: '9.5 - 14.0 LPA', offers: 42, category: 'Brand Architecture & Visual Comm' },
+        { company: 'IKEA Design & Retail India', packages: '10.5 - 15.0 LPA', offers: 26, category: 'Spatial & Product Styling' },
+        { company: 'UX Mint Digital Labs', packages: '8.5 - 12.5 LPA', offers: 54, category: 'Interaction & Mobile UI/UX' },
+        { company: 'DDB Mudra Group', packages: '8.0 - 11.5 LPA', offers: 32, category: 'Advertising & Creative Direction' },
+        { company: 'Cognizant Interactive Studio', packages: '9.0 - 13.0 LPA', offers: 46, category: 'Human-Centered Experience Design' }
+      ],
+      7: [
+        { company: 'KPMG Advisory Kochi', packages: '8.0 - 12.0 LPA', offers: 48, category: 'Risk & Strategy' },
+        { company: 'Federal Bank Officers Cadre', packages: '10.5 - 14.0 LPA', offers: 56, category: 'Commercial Banking' },
+        { company: 'Ernst & Young GDS Kochi', packages: '8.5 - 12.5 LPA', offers: 72, category: 'Operations Consulting' },
+        { company: 'Muthoot Finance Corporate', packages: '7.5 - 10.5 LPA', offers: 64, category: 'Financial Services' },
+        { company: 'Lulu Group International', packages: '9.0 - 13.5 LPA', offers: 44, category: 'Retail Operations & Supply Chain' },
+        { company: 'Asian Paints Marketing', packages: '11.0 - 15.0 LPA', offers: 22, category: 'Brand Territory Management' }
+      ],
+      8: [
+        { company: 'Deloitte USI Kochi Hub', packages: '8.0 - 11.5 LPA', offers: 68, category: 'Audit & Financial Assurance' },
+        { company: 'PwC Acceleration Centre', packages: '7.8 - 11.0 LPA', offers: 62, category: 'Corporate Tax Services' },
+        { company: 'South Indian Bank', packages: '8.5 - 11.0 LPA', offers: 45, category: 'Probationary Banking' },
+        { company: 'BDO India', packages: '7.0 - 9.8 LPA', offers: 38, category: 'Corporate Accounting' },
+        { company: 'Geojit Financial Services', packages: '6.5 - 9.2 LPA', offers: 52, category: 'Wealth & Equity Advisory' }
+      ],
+      9: [
+        { company: 'Cochin Shipyard Engineering', packages: '10.0 - 14.5 LPA', offers: 34, category: 'Marine & Structural Design' },
+        { company: 'Tata Consultancy Services', packages: '7.0 - 10.5 LPA', offers: 110, category: 'Engineering Systems' },
+        { company: 'Larsen & Toubro (L&T)', packages: '8.5 - 12.5 LPA', offers: 42, category: 'Smart Infrastructure' },
+        { company: 'Quest Global', packages: '8.0 - 11.5 LPA', offers: 56, category: 'Aero & Industrial Eng.' },
+        { company: 'Infosys BPM & Tech', packages: '6.5 - 9.0 LPA', offers: 94, category: 'Enterprise Technology' }
+      ],
+      10: [
+        { company: 'Biocon Biologics', packages: '8.5 - 12.5 LPA', offers: 36, category: 'Bio-Pharmaceutical R&D' },
+        { company: 'Syngene International', packages: '8.0 - 11.8 LPA', offers: 32, category: 'Analytical Chemistry' },
+        { company: 'Dr. Reddy’s Laboratories', packages: '7.5 - 11.0 LPA', offers: 28, category: 'Quality Assurance & Testing' },
+        { company: 'Serum Institute of India', packages: '9.0 - 13.0 LPA', offers: 18, category: 'Immunological Formulation' },
+        { company: 'CSIR Laboratories Research Fellow', packages: '6.0 - 8.5 LPA', offers: 24, category: 'National Scientific Fellowships' },
+        { company: 'Eurofins Scientific', packages: '7.0 - 10.0 LPA', offers: 40, category: 'Environmental & Food Diagnostics' }
+      ]
+    };
+
     return {
       college: col,
       departments: depts,
@@ -337,7 +422,7 @@ window.NovaPortalData = (function () {
         outstanding: feeOutstanding,
         collectionPct: collectionPct,
         breakdown: [
-          { item: 'Tuition Fee', demand: feeDemand * 0.70, collected: feeCollected * 0.72, outstanding: (feeDemand * 0.70) - (feeCollected * 0.72) },
+          { item: 'Tuition Fee (Core Academic)', demand: feeDemand * 0.70, collected: feeCollected * 0.72, outstanding: (feeDemand * 0.70) - (feeCollected * 0.72) },
           { item: 'Examination & Evaluation Fee', demand: feeDemand * 0.12, collected: feeCollected * 0.12, outstanding: (feeDemand * 0.12) - (feeCollected * 0.12) },
           { item: 'Hostel & Residential Rent', demand: feeDemand * 0.10, collected: feeCollected * 0.09, outstanding: (feeDemand * 0.10) - (feeCollected * 0.09) },
           { item: 'Transport & Facilities Service', demand: feeDemand * 0.05, collected: feeCollected * 0.045, outstanding: (feeDemand * 0.05) - (feeCollected * 0.045) },
@@ -351,15 +436,7 @@ window.NovaPortalData = (function () {
         ...data.placement,
         rate: placementPct,
         placementPct: placementPct,
-        topRecruiters: [
-          { company: 'Amazon AWS', packages: '28.0 - 44.0 LPA', offers: 32, category: 'Product & Cloud' },
-          { company: 'Microsoft', packages: '42.0 - 52.0 LPA', offers: 18, category: 'Super Dream' },
-          { company: 'Deloitte USI', packages: '8.5 - 12.0 LPA', offers: 94, category: 'Management Consulting' },
-          { company: 'KPMG', packages: '7.5 - 10.5 LPA', offers: 78, category: 'Financial Forensics' },
-          { company: 'Morgan Stanley', packages: '16.0 - 24.0 LPA', offers: 24, category: 'Investment Banking' },
-          { company: 'Bosch Engineering', packages: '9.0 - 14.0 LPA', offers: 62, category: 'Core Automation' },
-          { company: 'Infosys Wingspan', packages: '6.5 - 9.0 LPA', offers: 185, category: 'IT & Cloud Services' }
-        ]
+        topRecruiters: collegeRecruiters[col.id] || collegeRecruiters[1]
       }
     };
   }
