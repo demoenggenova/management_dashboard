@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
     isLoading: false
   };
 
-  // ECharts instances registry
+  // ECharts instances registryy
   const charts = {
     campusComparison: null,
     academicPass: null,
@@ -454,7 +454,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const testName = (params.name || params.seriesName || '').trim();
     if (testName) {
       const colleges = window.NovaPortalData.COLLEGES;
-      const match = colleges.find(c => 
+      const match = colleges.find(c =>
         c.code.toLowerCase() === testName.toLowerCase() ||
         c.shortName.toLowerCase() === testName.toLowerCase() ||
         c.name.toLowerCase() === testName.toLowerCase() ||
@@ -935,7 +935,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // --------------------------------------------------------------------------
   // INTERACTIVE KPI CLICK-TO-COMPARE FEATURE (CURRENT VS PREVIOUS PERIOD)
   // --------------------------------------------------------------------------
-  
+
   // --------------------------------------------------------------------------
   // WIRE KPI CARDS CLICK-TO-COMPARE LISTENERS (Requirement 2)
   // --------------------------------------------------------------------------
@@ -1202,7 +1202,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const colleges = [...data.colleges].reverse();
     const categories = colleges.map(c => c.shortName);
-    
+
     // Format values based on KPI
     const isCurrency = data.kpiKey === 'fee_demand' || data.kpiKey === 'fee_collection';
     const isPct = data.kpiKey.includes('percentage') || data.kpiKey.includes('rate') || data.kpiKey === 'pass_percentage' || data.kpiKey === 'placement_percentage' || data.kpiKey === 'attendance_percentage';
@@ -1671,7 +1671,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // --------------------------------------------------------------------------
-  
+
   // --------------------------------------------------------------------------
   // SECTION 1C: CONSOLIDATED UNIVERSITY PERFORMANCE COMPARISON MATRIX
   // --------------------------------------------------------------------------
@@ -1698,7 +1698,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const isExcellence = d.academic.passPct >= 91 && parseFloat(plcRateStr) >= 88 && d.attendance.pct >= 85;
       const isRisk = d.attendance.pct < 85 || d.academic.passPct < 88 || d.finance.collectionPct < 88;
-      const statusBadge = isExcellence 
+      const statusBadge = isExcellence
         ? '<span class="badge bg-success bg-opacity-10 text-success border border-success-subtle">Excellence Benchmark</span>'
         : (isRisk ? '<span class="badge bg-warning bg-opacity-10 text-warning border border-warning-subtle">Review Monitoring</span>' : '<span class="badge bg-primary bg-opacity-10 text-primary border border-primary-subtle">Compliant</span>');
 
@@ -1789,14 +1789,14 @@ document.addEventListener('DOMContentLoaded', function () {
       if (btnTop) {
         btnTop.style.display = window.scrollY > 300 ? 'flex' : 'none';
       }
-      
+
       // Update subnav active pill
       const sections = [
         'sectionKpis', 'sectionCampusComparison', 'sectionAcademic',
         'sectionFinance', 'sectionResearch', 'sectionStudents',
         'sectionFaculty', 'sectionAttendance', 'sectionPlacements', 'sectionInsights'
       ];
-      
+
       let currentSection = '';
       for (const sId of sections) {
         const sec = document.getElementById(sId);
@@ -1808,7 +1808,7 @@ document.addEventListener('DOMContentLoaded', function () {
           }
         }
       }
-      
+
       if (currentSection) {
         document.querySelectorAll('.subnav-pill').forEach(pill => {
           const href = pill.getAttribute('href');
@@ -2996,8 +2996,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const allColSeries = colleges.map((c, idx) => {
         const instData = window.NovaPortalData.INSTITUTIONAL_DATA ? window.NovaPortalData.INSTITUTIONAL_DATA[c.id] : null;
-        const monthly = (instData && instData.attendance && instData.attendance.monthly) 
-          ? instData.attendance.monthly 
+        const monthly = (instData && instData.attendance && instData.attendance.monthly)
+          ? instData.attendance.monthly
           : [87.0, 86.4, 85.8, 86.2, c.pct || 85.5];
         return {
           name: c.code,
@@ -3182,7 +3182,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const diffClass = diff >= 0 ? 'text-success' : 'text-danger';
       const diffSign = diff >= 0 ? '+' : '';
       const isCompliant = c.pct >= 85;
-      const statusBadge = isCompliant 
+      const statusBadge = isCompliant
         ? '<span class="badge bg-success bg-opacity-10 text-success">Compliant</span>'
         : (c.pct >= 75 ? '<span class="badge bg-warning bg-opacity-10 text-warning">Under Review</span>' : '<span class="badge bg-danger bg-opacity-10 text-danger">Intervention Req</span>');
 
@@ -3408,8 +3408,8 @@ document.addEventListener('DOMContentLoaded', function () {
     if (alertsContainer && insights.alerts) {
       const renderAlertCards = (category) => {
         alertsContainer.innerHTML = '';
-        const filtered = category === 'all' 
-          ? insights.alerts 
+        const filtered = category === 'all'
+          ? insights.alerts
           : insights.alerts.filter(a => a.category === category);
 
         if (filtered.length === 0) {
