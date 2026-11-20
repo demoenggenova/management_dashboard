@@ -3601,19 +3601,19 @@ document.addEventListener('DOMContentLoaded', function () {
 const WORKFLOW_DATA = {
   'WF-9821': {
     id: '#WF-9821',
-    title: 'End-Semester Exam Moderation Sign-Off',
+    title: 'FET BLR - Request to Sanction for 4 Lakhs Amount for Annual day',
     subtitle: 'Faculty of Engineering and Technology - BLR (FET-BLR)',
-    module: 'Academic',
+    module: 'Finance',
     reporter: 'Dr. R. K. Narayanan (Dean)',
     assignee: 'Super Admin',
     priority: 'High',
     priorityClass: 'bg-danger',
     created: '17-11-2026',
-    updatedBy: 'Controller of Exams',
-    queryText: 'Dean FET submitted odd-semester final examination question bank moderation report. All 18 department board of examiners (BOE) have validated paper schemas, Bloom taxonomy tagging, and external reviewer clearances. Seeking Super Admin final sign-off for controller of examination repository lock.',
-    docName: 'FET_BLR_OddSem2026_Moderation_Docket_v2.pdf',
+    updatedBy: 'Finance Officer',
+    queryText: 'Dean FET submitted formal budget sanction requisition for ₹4,00,000 (Rupees Four Lakhs only) towards the upcoming Institutional Annual Day Celebration 2026-27 at Bangalore Campus. Requisition covers stage infrastructure, sound acoustics, guest felicitations, and student merit awards. Recommended by Campus Cultural Committee and submitted for Super Admin executive approval.',
+    docName: 'FET_BLR_Annual_Day_Sanction_Requisition_4Lakhs.pdf',
     docCollege: 'Faculty of Engineering and Technology (BLR)',
-    docRemarks: "Dean's Council Recommendation: All question papers strictly follow OBE attainment models with Course Outcome (CO) mapping verified."
+    docRemarks: 'Finance Advisory: Budget allocation verified against Institutional Annual Cultural Day provisions. Within permissible departmental ceiling.'
   },
   'WF-9815': {
     id: '#WF-9815',

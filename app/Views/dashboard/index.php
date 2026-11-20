@@ -62,13 +62,13 @@
             <tbody id="notificationTableBody">
               <tr class="clickable-wf-row" onclick="openWorkflowDetailModal('WF-9821')" title="Click to view query details and document verification">
                 <td class="fw-bold text-primary">#WF-9821 <i class="bi bi-box-arrow-up-right small text-muted ms-1"></i></td>
-                <td><span class="badge bg-light text-dark border">Academic</span></td>
-                <td>End-Semester Exam Moderation</td>
-                <td class="fw-semibold">FET-BLR: Odd Sem Final Question Bank Moderation Sign-Off</td>
+                <td><span class="badge bg-light text-dark border">Finance</span></td>
+                <td>Annual Day Budget Sanction</td>
+                <td class="fw-semibold">FET BLR - Request to Sanction for 4 Lakhs Amount for Annual day</td>
                 <td>Dr. R. K. Narayanan (Dean)</td>
                 <td><span class="badge bg-primary bg-opacity-10 text-primary">Super Admin</span></td>
                 <td><span class="badge bg-danger">High</span></td>
-                <td>Controller of Exams</td>
+                <td>Finance Officer</td>
                 <td>17-11-2026</td>
                 <td>18-11-2026 09:30</td>
               </tr>
