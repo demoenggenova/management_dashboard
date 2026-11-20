@@ -588,16 +588,15 @@ body {
 }
 
 /* -------------------------------------------------------------------------- */
-/* GLOBAL FILTER CONTROL BAR                                                  */
+/* GLOBAL FILTER CONTROL BAR (NORMAL SCROLL - NOT STICKY)                    */
 /* -------------------------------------------------------------------------- */
 .filter-bar-sticky {
   background: #ffffff;
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
-  position: sticky;
-  top: var(--header-height);
-  z-index: 1020;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04);
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
   padding: 12px 20px;
 }
 
@@ -746,7 +745,7 @@ body {
 }
 
 .section-anchor {
-  scroll-margin-top: calc(var(--header-height) + 95px);
+  scroll-margin-top: calc(var(--header-height) + 20px);
 }
 
 .analytics-section-header {
