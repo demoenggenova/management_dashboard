@@ -139,7 +139,7 @@ if (strpos($uri, '/api/dashboard') !== false) {
 }
 
 // -----------------------------------------------------------------------------
-// 2. CHECK CI4 FRAMEWORK BOOTSTRAP (If full CI4 vendor package exists & PHP >= 7.4)
+// 2. CHECK CI4 FRAMEWORK BOOTSTRAPP (If full CI4 vendor package exists & PHP >= 7.4)
 // -----------------------------------------------------------------------------
 $pathsConfig = FCPATH . '../app/Config/Paths.php';
 $hasCi4 = false;
