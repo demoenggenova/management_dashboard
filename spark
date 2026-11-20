@@ -1,0 +1,44 @@
+#!/usr/bin/env php
+<?php
+
+/*
+ * --------------------------------------------------------------------
+ * CodeIgniter command-line tool
+ * --------------------------------------------------------------------
+ */
+
+define('SPARKED', true);
+
+// Set path to front controller
+define('FCPATH', __DIR__ . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR);
+
+// Ensure the current directory is pointing to the front controller's directory
+chdir(FCPATH);
+
+// Load paths config
+require_once FCPATH . '../app/Config/Paths.php';
+$paths = new Config\Paths();
+
+// Location of the framework-supplied classes.
+$bootstrap = rtrim($paths->systemDirectory, '\\/ ') . DIRECTORY_SEPARATOR . 'bootstrap.php';
+
+if (!file_exists($bootstrap)) {
+    echo "CodeIgniter system bootstrap not found in {$paths->systemDirectory}.\n";
+    echo "NOVAPORTAL Dashboard application is installed and ready at " . FCPATH . "index.html\n";
+    exit(0);
+}
+
+require_once $bootstrap;
+
+require_once SYSTEMPATH . 'Config/DotEnv.php';
+(new CodeIgniter\Config\DotEnv(ROOTPATH))->load();
+
+$app = Config\Services::codeigniter();
+$app->initialize();
+$app->setContext('php-cli');
+
+$console = new CodeIgniter\CLI\Console();
+$exitCode = $console->run();
+
+exit($exitCode);
+
